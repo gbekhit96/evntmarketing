@@ -41,26 +41,32 @@ const Index = () => {
 
       {/* PROOF BAR — charcoal */}
       <section className="bg-charcoal py-16 border-b border-cream/5">
+      {/* TRUSTED BY — logos as typography */}
+      <section className="bg-charcoal py-20 md:py-24 border-b border-cream/5">
         <div className={W}>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-16">
+          <p className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/25 mb-12">Trusted by teams at</p>
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-x-10 gap-y-8 items-center">
+            {["YouTube", "Meta", "Pinterest", "Snapchat", "TikTok", "#paid", "Female Quotient", "Unilever", "MrBeast", "Diageo", "BMW"].map((brand) => (
+              <span key={brand} className="font-sans text-[13px] md:text-sm font-semibold text-cream/30 tracking-wide whitespace-nowrap">{brand}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STATS — bold numbers */}
+      <section className="bg-charcoal-light py-24 md:py-32">
+        <div className={W}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-16 sm:gap-12 md:gap-20">
             {[
               { num: "750+", label: "Events executed" },
               { num: "$100M+", label: "Pipeline influenced" },
               { num: "10+", label: "Years in experiential & growth" },
             ].map((s) => (
-              <div key={s.num}>
-                <p className="text-3xl md:text-4xl font-serif font-semibold tracking-tight text-cream">{s.num}</p>
-                <p className="font-sans text-xs tracking-wide text-cream/40 mt-1">{s.label}</p>
+              <div key={s.num} className="text-center sm:text-left">
+                <p className="text-6xl md:text-7xl lg:text-8xl font-serif font-semibold tracking-tighter text-cream leading-none">{s.num}</p>
+                <p className="font-sans text-[11px] tracking-[0.15em] uppercase text-cream/35 mt-4">{s.label}</p>
               </div>
             ))}
-          </div>
-          <div className="mt-14 pt-10 border-t border-cream/5">
-            <p className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-8">Trusted by</p>
-            <div className="flex flex-wrap items-center gap-x-12 gap-y-4">
-              {["TikTok", "Meta", "Snapchat", "YouTube", "Google"].map((brand) => (
-                <span key={brand} className="font-sans text-sm md:text-base font-medium text-cream/25 tracking-wide">{brand}</span>
-              ))}
-            </div>
           </div>
         </div>
       </section>
