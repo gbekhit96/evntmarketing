@@ -22,17 +22,23 @@
     --muted: 35 10% 92%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 30 8% 88%;
-    --accent-foreground: 0 0% 8%;
+    --accent: 345 45% 25%;
+    --accent-foreground: 40 20% 96%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 30 10% 88%;
     --input: 30 10% 88%;
-    --ring: 0 0% 8%;
+    --ring: 345 45% 25%;
 
     --radius: 0.25rem;
+
+    --wine: 345 45% 25%;
+    --wine-foreground: 40 20% 96%;
+    --wine-light: 345 30% 35%;
+
+    --warm: 35 20% 95%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
