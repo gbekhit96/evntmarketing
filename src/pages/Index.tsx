@@ -50,13 +50,31 @@ const Index = () => {
         </div>
       </section>
 
-      {/* TRUSTED BY — logos as typography */}
+      {/* TRUSTED BY — logo grid */}
       <section className="bg-charcoal py-20 md:py-24 border-b border-cream/5">
         <div className={W}>
           <p className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/25 mb-12">Trusted by teams at</p>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-x-10 gap-y-8 items-center">
-            {["YouTube", "Meta", "Pinterest", "Snapchat", "TikTok", "#paid", "Female Quotient", "Unilever", "MrBeast", "Diageo", "BMW"].map((brand) => (
-              <span key={brand} className="font-sans text-[13px] md:text-sm font-semibold text-cream/30 tracking-wide whitespace-nowrap">{brand}</span>
+            {[
+              { src: logoYoutube, alt: "YouTube" },
+              { src: logoMeta, alt: "Meta" },
+              { src: logoPinterest, alt: "Pinterest" },
+              { src: logoSnapchat, alt: "Snapchat" },
+              { src: logoTiktok, alt: "TikTok" },
+              { src: logoPaid, alt: "#paid" },
+              { src: logoFQ, alt: "Female Quotient" },
+              { src: logoUnilever, alt: "Unilever" },
+              { src: logoMrbeast, alt: "MrBeast" },
+              { src: logoDiageo, alt: "Diageo" },
+              { src: logoBmw, alt: "BMW" },
+            ].map((logo) => (
+              <img
+                key={logo.alt}
+                src={logo.src}
+                alt={logo.alt}
+                className="h-6 md:h-7 w-auto object-contain opacity-40 brightness-0 invert"
+                loading="lazy"
+              />
             ))}
           </div>
         </div>
