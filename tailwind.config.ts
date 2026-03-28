@@ -53,10 +53,19 @@ export default {
         },
         wine: {
           DEFAULT: "hsl(var(--wine))",
+          deep: "hsl(var(--wine-deep))",
           foreground: "hsl(var(--wine-foreground))",
           light: "hsl(var(--wine-light))",
+          muted: "hsl(var(--wine-muted))",
         },
-        warm: "hsl(var(--warm))",
+        charcoal: {
+          DEFAULT: "hsl(var(--charcoal))",
+          light: "hsl(var(--charcoal-light))",
+        },
+        cream: {
+          DEFAULT: "hsl(var(--cream))",
+          muted: "hsl(var(--cream-muted))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
