@@ -5,12 +5,14 @@ import detailHands from "@/assets/detail-hands.jpg";
 import venueWide from "@/assets/venue-wide.jpg";
 import tableOverhead from "@/assets/table-overhead.jpg";
 
+const W = "max-w-[1200px] mx-auto px-6 md:px-12";
+
 const Index = () => {
   return (
     <main className="bg-background text-foreground">
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border/50">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 flex items-center justify-between py-5">
+        <div className={`${W} flex items-center justify-between py-5`}>
           <span className="font-serif text-lg font-semibold tracking-tight">EVNT</span>
           <Button variant="editorialOutline" size="sm" asChild>
             <a href="#contact">Get in Touch</a>
@@ -19,16 +21,16 @@ const Index = () => {
       </nav>
 
       {/* HERO */}
-      <section className="pt-40 pb-32 md:pt-48 md:pb-40">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+      <section className="pt-36 pb-20 md:pt-44 md:pb-24">
+        <div className={W}>
           <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold leading-[0.95] tracking-tighter max-w-5xl">
-            We don't plan events.
+            Turn events into
             <br />
-            <span className="italic font-normal">We build revenue.</span>
+            <span className="italic font-normal">your #1 pipeline channel.</span>
           </h1>
           <div className="mt-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-8">
-            <p className="text-muted-foreground font-sans text-[11px] tracking-[0.25em] uppercase max-w-xs">
-              Events as a measurable growth channel.
+            <p className="text-muted-foreground font-sans text-sm max-w-sm leading-relaxed">
+              EVNT is a strategic B2B event partner for growth-stage and enterprise brands. We build event programs that drive pipeline, accelerate deals, and create lasting relationships.
             </p>
             <Button variant="editorial" size="lg" className="px-10 py-6 w-fit" asChild>
               <a href="#contact">Get in Touch</a>
@@ -37,12 +39,43 @@ const Index = () => {
         </div>
       </section>
 
-      {/* HERO IMAGE — full width with consistent margins */}
-      <section className="max-w-[1200px] mx-auto px-6 md:px-12 pb-32 md:pb-40">
+      {/* PROOF BAR */}
+      <section className="py-16 border-t border-b border-border">
+        <div className={W}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-16">
+            <div>
+              <p className="text-3xl md:text-4xl font-serif font-semibold tracking-tight">750+</p>
+              <p className="font-sans text-xs tracking-wide text-muted-foreground mt-1">Events executed</p>
+            </div>
+            <div>
+              <p className="text-3xl md:text-4xl font-serif font-semibold tracking-tight">$100M+</p>
+              <p className="font-sans text-xs tracking-wide text-muted-foreground mt-1">Pipeline influenced</p>
+            </div>
+            <div>
+              <p className="text-3xl md:text-4xl font-serif font-semibold tracking-tight">10+</p>
+              <p className="font-sans text-xs tracking-wide text-muted-foreground mt-1">Years in experiential & growth</p>
+            </div>
+          </div>
+          {/* TRUSTED BY */}
+          <div className="mt-14 pt-10 border-t border-border">
+            <p className="text-[11px] font-sans uppercase tracking-[0.25em] text-muted-foreground mb-8">Trusted by</p>
+            <div className="flex flex-wrap items-center gap-x-12 gap-y-4">
+              {["TikTok", "Meta", "Snapchat", "YouTube", "Google"].map((brand) => (
+                <span key={brand} className="font-sans text-sm md:text-base font-medium text-foreground/60 tracking-wide">
+                  {brand}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HERO IMAGE */}
+      <section className={`${W} py-16 md:py-20`}>
         <div className="overflow-hidden">
           <img
             src={venueWide}
-            alt="Premium venue at dusk with city skyline"
+            alt="Premium event venue"
             className="w-full h-[400px] md:h-[560px] object-cover"
             width={1920}
             height={1080}
@@ -50,51 +83,47 @@ const Index = () => {
         </div>
       </section>
 
-      {/* STATEMENT */}
-      <section className="py-32 md:py-44 border-t border-border">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12">
-          <p className="text-3xl sm:text-5xl md:text-7xl font-serif leading-[1.05] tracking-tighter max-w-4xl">
-            Events aren't a brand play.
-            <br />
-            <span className="italic">They're a growth lever.</span>
-          </p>
-        </div>
-      </section>
-
-      {/* CONTEXT — split layout */}
-      <section className="py-32 md:py-44 border-t border-border">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
+      {/* WHAT WE DO — clear positioning */}
+      <section className="py-24 md:py-32 border-t border-border">
+        <div className={`${W} grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16`}>
           <div className="md:col-span-4">
-            <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-muted-foreground">The Opportunity</h2>
+            <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-muted-foreground">What We Do</h2>
           </div>
           <div className="md:col-span-6">
-            <div className="font-sans text-sm md:text-base leading-relaxed text-muted-foreground space-y-5">
-              <p>Outreach is noise. Trust is scarce.</p>
-              <p>Real-world interaction is the most valuable asset in modern marketing.</p>
-              <p className="text-foreground font-medium">Relationships form in rooms — not inboxes.</p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-serif leading-[1.15] tracking-tight mb-8">
+              We build and run event programs that generate qualified pipeline and accelerate revenue.
+            </p>
+            <div className="font-sans text-sm leading-relaxed text-muted-foreground space-y-4 max-w-md">
+              <p>Not brand awareness. Not impressions. Pipeline.</p>
+              <p>Every event is designed around a specific business outcome — a room of qualified buyers, a set of relationships advanced, a deal moved forward.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* STATEMENT 2 */}
-      <section className="py-32 md:py-44 border-t border-border">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
-          <p className="text-3xl sm:text-5xl md:text-7xl font-serif leading-[1.05] tracking-tighter">
-            We don't fill rooms.
-            <br />
-            <span className="italic font-normal">We build the right ones.</span>
-          </p>
+      {/* WHO IT'S FOR */}
+      <section className="py-24 md:py-32 border-t border-border">
+        <div className={`${W} grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16`}>
+          <div className="md:col-span-4">
+            <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-muted-foreground">Who It's For</h2>
+          </div>
+          <div className="md:col-span-6">
+            <div className="font-sans text-sm leading-relaxed text-muted-foreground space-y-4 max-w-md">
+              <p className="text-foreground font-medium">B2B companies using events as a growth channel.</p>
+              <p>Marketing leaders who need events that show up in the CRM — not just in a photo album.</p>
+              <p>Sales teams that need warm rooms, not cold lists.</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* IMAGE BREAK */}
-      <section className="max-w-[1200px] mx-auto px-6 md:px-12">
+      {/* IMAGE PAIR */}
+      <section className={`${W} py-8`}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="overflow-hidden">
             <img
               src={eventDinnerTable}
-              alt="Intimate dinner setting with candlelight"
+              alt="Immersive dinner experience with illuminated table"
               className="w-full h-[300px] md:h-[400px] object-cover"
               loading="lazy"
               width={1920}
@@ -114,40 +143,31 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FRAMEWORK — structured split */}
-      <section className="py-32 md:py-44 border-t border-border mt-32 md:mt-44">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
-          <div className="md:col-span-5">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-semibold leading-[1.05] tracking-tighter">
-              The right people.<br />The right conditions.
-            </h2>
-          </div>
-          <div className="md:col-span-5 md:col-start-8">
-            <ul className="space-y-4 font-sans text-muted-foreground text-[11px] md:text-xs tracking-[0.2em] uppercase">
-              <li>Audience-first</li>
-              <li>Attendance by intent, not obligation</li>
-              <li>Interaction by design</li>
-              <li>Relationships accelerated</li>
-              <li>Pipeline-aligned</li>
-            </ul>
-          </div>
+      {/* STATEMENT */}
+      <section className="py-32 md:py-44">
+        <div className={`${W} text-center`}>
+          <p className="text-3xl sm:text-5xl md:text-7xl font-serif leading-[1.05] tracking-tighter">
+            We don't fill rooms.
+            <br />
+            <span className="italic font-normal">We fill pipelines.</span>
+          </p>
         </div>
       </section>
 
-      {/* SERVICES — structured grid */}
-      <section className="py-32 md:py-44 border-t border-border">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12">
-          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-muted-foreground mb-16 md:mb-20">Services</h2>
+      {/* SERVICES */}
+      <section className="py-24 md:py-32 border-t border-border">
+        <div className={W}>
+          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-muted-foreground mb-16 md:mb-20">How We Deliver</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-14 md:gap-y-16">
             {[
-              { title: "Event Strategy", desc: "Audience. Format. Purpose." },
-              { title: "Creative Direction", desc: "Worth attending." },
-              { title: "Production & Execution", desc: "Quality. Detail. End to end." },
-              { title: "Programming & Content", desc: "Conversation, not content." },
+              { title: "Event Strategy", desc: "Define the audience, format, and business case for every event." },
+              { title: "Creative Direction", desc: "Design experiences worth showing up for — not attending out of obligation." },
+              { title: "Production & Execution", desc: "Full delivery. Every detail. On time, on budget, on brand." },
+              { title: "Measurement & Attribution", desc: "CRM-integrated tracking. Pipeline attribution. Real ROI." },
             ].map((s) => (
               <div key={s.title} className="border-t border-border pt-6">
                 <h3 className="text-lg md:text-xl font-serif font-semibold mb-2">{s.title}</h3>
-                <p className="font-sans text-muted-foreground text-xs tracking-wide">{s.desc}</p>
+                <p className="font-sans text-muted-foreground text-xs md:text-sm leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -155,17 +175,18 @@ const Index = () => {
       </section>
 
       {/* HOW WE WORK — split */}
-      <section className="py-32 md:py-44 border-t border-border">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
+      <section className="py-24 md:py-32 border-t border-border">
+        <div className={`${W} grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16`}>
           <div className="md:col-span-5">
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-semibold leading-[1.05] tracking-tighter">
-              Strategic partner.<br />Not a vendor.
+              Built as a partner.<br />Not a vendor.
             </h2>
           </div>
           <div className="md:col-span-5 md:col-start-8">
-            <div className="font-sans text-sm leading-relaxed text-muted-foreground space-y-5">
-              <p>Embedded with your team as a fractional Chief Events Officer.</p>
-              <p>One-off events don't scale. Programs do.</p>
+            <div className="font-sans text-sm leading-relaxed text-muted-foreground space-y-4">
+              <p className="text-foreground font-medium">EVNT operates as your fractional Chief Events Officer.</p>
+              <p>We embed with your marketing and sales teams and build events as a repeatable, measurable growth channel.</p>
+              <p>One-off events don't compound. Programs do.</p>
             </div>
             <div className="mt-8 space-y-1 text-foreground font-medium font-sans text-[11px] tracking-[0.2em] uppercase">
               <p>Strategy on retainer.</p>
@@ -175,12 +196,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* SINGLE IMAGE BREAK */}
-      <section className="max-w-[1200px] mx-auto px-6 md:px-12 py-8">
+      {/* IMAGE */}
+      <section className={`${W} py-8`}>
         <div className="overflow-hidden">
           <img
             src={tableOverhead}
-            alt="Elegantly set dinner table overhead"
+            alt="Elegantly set dinner table"
             className="w-full h-[350px] md:h-[500px] object-cover"
             loading="lazy"
             width={1920}
@@ -189,11 +210,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* EVENT TYPES — structured split */}
-      <section className="py-32 md:py-44 border-t border-border mt-8">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
+      {/* EVENT TYPES */}
+      <section className="py-24 md:py-32 border-t border-border mt-8">
+        <div className={`${W} grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16`}>
           <div className="md:col-span-4">
-            <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-muted-foreground">Event Types</h2>
+            <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-muted-foreground">Formats</h2>
           </div>
           <div className="md:col-span-6">
             <div className="space-y-4">
@@ -212,74 +233,55 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CREDIBILITY — structured split */}
-      <section className="py-32 md:py-44 border-t border-border">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
-          <div className="md:col-span-5">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-semibold leading-[1.05] tracking-tighter">
-              Built on experience.
-            </h2>
-          </div>
-          <div className="md:col-span-5 md:col-start-8">
-            <div className="space-y-4 font-sans text-[11px] md:text-xs tracking-[0.15em] uppercase text-muted-foreground">
-              <p>750+ events</p>
-              <p>$100M+ pipeline influenced</p>
-              <p>10+ years in growth & experiential</p>
-              <p>TikTok · Meta · Snapchat · YouTube</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* DIFFERENTIATION — MANIFESTO on wine */}
+      {/* DIFFERENTIATION — wine */}
       <section className="py-32 md:py-44 bg-wine text-wine-foreground">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+        <div className={W}>
+          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-wine-foreground/60 mb-16">Why EVNT</h2>
           <ul className="space-y-10 md:space-y-14 text-xl sm:text-3xl md:text-4xl lg:text-5xl font-serif leading-[1.1] tracking-tighter max-w-4xl">
-            <li>Curated rooms over large audiences</li>
-            <li>Relationships over impressions</li>
-            <li>Pipeline over vanity metrics</li>
-            <li>Experience design over event planning</li>
-            <li>Programs over one-off events</li>
+            <li>Curated rooms, not crowded ones</li>
+            <li>Pipeline, not impressions</li>
+            <li>Programs, not one-offs</li>
+            <li>Measured like a growth channel</li>
+            <li>Built for revenue, not applause</li>
           </ul>
         </div>
       </section>
 
-      {/* MEASUREMENT — structured split */}
-      <section className="py-32 md:py-44">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
+      {/* MEASUREMENT */}
+      <section className="py-24 md:py-32">
+        <div className={`${W} grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16`}>
           <div className="md:col-span-5">
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-semibold leading-[1.05] tracking-tighter">
-              Measured like a growth channel.
+              Every event<br />is measured.
             </h2>
           </div>
           <div className="md:col-span-5 md:col-start-8">
-            <p className="font-sans text-sm leading-relaxed text-muted-foreground">
-              CRM-integrated. Pipeline-tracked. Attendee quality, deal acceleration — not vanity.
-            </p>
+            <div className="font-sans text-sm leading-relaxed text-muted-foreground space-y-4 max-w-md">
+              <p>Events feed directly into your CRM. Every attendee tracked. Every conversation logged. Every deal influenced — attributed.</p>
+              <p className="text-foreground font-medium">Attendee quality. Pipeline influence. Deal velocity. That's what we report on.</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* FINAL CTA */}
       <section id="contact" className="py-32 md:py-44 border-t border-border">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
-          <h2 className="text-3xl sm:text-5xl md:text-7xl font-semibold leading-[1.0] tracking-tighter max-w-3xl mx-auto mb-10">
-            If events drive growth, build them that way.
+        <div className={`${W} text-center`}>
+          <h2 className="text-3xl sm:text-5xl md:text-7xl font-semibold leading-[1.0] tracking-tighter max-w-4xl mx-auto mb-6">
+            Ready to make events your highest-performing channel?
           </h2>
-          <div className="mt-12">
-            <Button variant="editorial" size="lg" className="px-10 py-6">
-              Start a Conversation
-            </Button>
-          </div>
-          <p className="mt-10 text-muted-foreground font-sans text-[11px] italic tracking-widest">
-            Worth showing up for.
+          <p className="text-muted-foreground font-sans text-sm max-w-md mx-auto mb-12">
+            Let's talk about building an event program that shows up in your pipeline — not just your photo gallery.
           </p>
+          <Button variant="editorial" size="lg" className="px-10 py-6">
+            Start a Conversation
+          </Button>
         </div>
       </section>
 
       {/* FOOTER */}
       <footer className="py-12 border-t border-border">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className={`${W} flex flex-col sm:flex-row items-center justify-between gap-4`}>
           <span className="font-serif text-lg font-semibold tracking-tight">EVNT</span>
           <a href="mailto:hello@evnt.com" className="font-sans text-[11px] text-muted-foreground hover:text-foreground transition-colors tracking-[0.15em]">
             hello@evnt.com
