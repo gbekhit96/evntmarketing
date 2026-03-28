@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroDinner from "@/assets/hero-dinner.jpg";
+import eventDinnerTable from "@/assets/event-dinner-table.jpg";
 import spaceInterior from "@/assets/space-interior.jpg";
 import detailHands from "@/assets/detail-hands.jpg";
 import venueWide from "@/assets/venue-wide.jpg";
@@ -93,7 +93,7 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="overflow-hidden">
             <img
-              src={heroDinner}
+              src={eventDinnerTable}
               alt="Intimate dinner setting with candlelight"
               className="w-full h-[300px] md:h-[400px] object-cover"
               loading="lazy"
