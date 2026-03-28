@@ -93,7 +93,7 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="overflow-hidden">
             <img
-              src={heroDinner}
+              src={eventDinnerTable}
               alt="Intimate dinner setting with candlelight"
               className="w-full h-[300px] md:h-[400px] object-cover"
               loading="lazy"
