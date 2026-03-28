@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroDinner from "@/assets/hero-dinner.jpg";
+import eventDinnerTable from "@/assets/event-dinner-table.jpg";
 import spaceInterior from "@/assets/space-interior.jpg";
 import detailHands from "@/assets/detail-hands.jpg";
 import venueWide from "@/assets/venue-wide.jpg";
