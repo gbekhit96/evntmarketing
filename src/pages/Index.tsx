@@ -39,8 +39,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* PROOF BAR — charcoal */}
-      <section className="bg-charcoal py-16 border-b border-cream/5">
       {/* TRUSTED BY — logos as typography */}
       <section className="bg-charcoal py-20 md:py-24 border-b border-cream/5">
         <div className={W}>
