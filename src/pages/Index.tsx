@@ -47,10 +47,10 @@ const Index = () => {
       </section>
 
       {/* TRUSTED BY — logo grid */}
-      <section className="bg-charcoal py-20 md:py-24 border-b border-cream/5">
+      <section className="bg-charcoal py-24 md:py-32 border-b border-cream/5">
         <div className={W}>
-          <p className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/25 mb-14">Trusted by teams at</p>
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-10 md:gap-x-16">
+          <p className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/25 mb-16 text-center">Trusted by teams at</p>
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-x-10 gap-y-12 md:gap-x-14 items-center justify-items-center max-w-4xl mx-auto">
             {[
               { src: logoYoutube, alt: "YouTube" },
               { src: logoMeta, alt: "Meta" },
@@ -64,7 +64,7 @@ const Index = () => {
                 key={logo.alt}
                 src={logo.src}
                 alt={logo.alt}
-                className="h-5 md:h-6 w-auto object-contain opacity-50 brightness-0 invert"
+                className="h-7 sm:h-9 md:h-11 w-auto object-contain opacity-60 brightness-0 invert"
                 loading="lazy"
               />
             ))}
