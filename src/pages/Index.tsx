@@ -4,13 +4,6 @@ import eventDinnerTable from "@/assets/event-dinner-table.jpg";
 import spaceInterior from "@/assets/space-interior.jpg";
 import detailHands from "@/assets/detail-hands.jpg";
 import venueWide from "@/assets/venue-wide.jpg";
-import logoYoutube from "@/assets/logos/youtube.png";
-import logoMeta from "@/assets/logos/meta.png";
-import logoPinterest from "@/assets/logos/pinterest.png";
-import logoSnapchat from "@/assets/logos/snapchat.png";
-import logoTiktok from "@/assets/logos/tiktok.png";
-import logoUnilever from "@/assets/logos/unilever.png";
-import logoBmw from "@/assets/logos/bmw.png";
 
 const W = "max-w-[1200px] mx-auto px-6 md:px-12";
 
@@ -67,24 +60,23 @@ const Index = () => {
       </section>
 
       {/* TRUSTED BY */}
-      <section className="bg-charcoal py-24 md:py-32 border-b border-cream/5">
+      <section style={{ backgroundColor: '#0D0D0D' }} className="py-[60px]">
         <div className={W}>
-          <p className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/25 mb-16 text-center">Trusted by teams at</p>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-x-10 gap-y-12 md:gap-x-14 items-center justify-items-center max-w-4xl mx-auto">
+          <p className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/25 mb-12 text-center">Trusted by teams at</p>
+          <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-10">
             {[
-              { src: logoYoutube, alt: "YouTube" },
-              { src: logoMeta, alt: "Meta" },
-              { src: logoPinterest, alt: "Pinterest" },
-              { src: logoSnapchat, alt: "Snapchat" },
-              { src: logoTiktok, alt: "TikTok" },
-              { src: logoUnilever, alt: "Unilever" },
-              { src: logoBmw, alt: "BMW" },
+              { src: "https://cdn.simpleicons.org/tiktok/ffffff", alt: "TikTok" },
+              { src: "https://cdn.simpleicons.org/meta/ffffff", alt: "Meta" },
+              { src: "https://cdn.simpleicons.org/snapchat/ffffff", alt: "Snapchat" },
+              { src: "https://cdn.simpleicons.org/youtube/ffffff", alt: "YouTube" },
+              { src: "https://cdn.simpleicons.org/googlecloud/ffffff", alt: "Google Cloud" },
             ].map((logo) => (
               <img
                 key={logo.alt}
                 src={logo.src}
                 alt={logo.alt}
-                className="h-7 sm:h-9 md:h-11 w-auto object-contain opacity-60 brightness-0 invert"
+                style={{ height: '32px', width: 'auto' }}
+                className="object-contain opacity-50 brightness-0 invert"
                 loading="lazy"
               />
             ))}
