@@ -90,7 +90,7 @@ const Index = () => {
               Every other channel is getting noisier. This one is getting more valuable.
             </p>
             <p className="font-sans text-sm md:text-[15px] leading-relaxed text-cream/55 max-w-lg">
-              Events convert at 18–25%. Cold outreach converts at 2–3%. The math isn't close.
+              Events convert at 18–25%. Cold outreach converts at 2–3%.
             </p>
           </div>
           <div className="md:col-span-4 md:col-start-9 flex flex-col justify-center items-start md:items-end text-left md:text-right">
