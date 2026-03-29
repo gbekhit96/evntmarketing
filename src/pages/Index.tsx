@@ -1,3 +1,4 @@
+import { Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import eventDinnerTable from "@/assets/event-dinner-table.jpg";
 import spaceInterior from "@/assets/space-interior.jpg";
@@ -438,13 +439,31 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FOOTER — charcoal */}
-      <footer className="bg-charcoal py-12 border-t border-cream/5">
-        <div className={`${W} flex flex-col sm:flex-row items-center justify-between gap-4`}>
-          <span className="font-serif text-lg font-semibold tracking-tight text-cream">EVNT</span>
-          <a href="mailto:hello@evnt.com" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.15em]">
-            hello@evnt.com
-          </a>
+      {/* FOOTER */}
+      <footer style={{ backgroundColor: '#0D0D0D' }} className="border-t border-wine">
+        <div className={`${W} py-14 md:py-16`}>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <span className="font-serif text-lg font-semibold tracking-tight text-cream">EVNT</span>
+            <nav className="flex items-center gap-8">
+              {["Work", "Services", "Team", "Contact"].map((link) => (
+                <a key={link} href={`#${link.toLowerCase()}`} className="font-sans text-[11px] tracking-[0.15em] uppercase text-cream/40 hover:text-cream transition-colors">
+                  {link}
+                </a>
+              ))}
+            </nav>
+            <div className="flex items-center gap-5">
+              <a href="mailto:hello@evnt.com" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.1em]">
+                hello@evnt.com
+              </a>
+              <a href="#" className="text-cream/40 hover:text-cream transition-colors" aria-label="Instagram">
+                <Instagram size={16} />
+              </a>
+              <a href="#" className="text-cream/40 hover:text-cream transition-colors" aria-label="LinkedIn">
+                <Linkedin size={16} />
+              </a>
+            </div>
+          </div>
+          <p className="font-sans text-[10px] tracking-[0.15em] text-cream/25 text-center mt-12">© EVNT. North America.</p>
         </div>
       </footer>
     </main>
