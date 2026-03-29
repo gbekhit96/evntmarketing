@@ -232,9 +232,9 @@ const Index = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section id="contact" className="bg-wine-deep py-36 md:py-48">
+      <section id="contact" className="bg-wine-deep py-20">
         <div className={`${W} text-center`}>
-          <h2 className="text-4xl sm:text-5xl md:text-[5rem] font-semibold leading-[0.98] tracking-tighter max-w-4xl mx-auto mb-14 text-cream">
+          <h2 className="text-4xl sm:text-5xl md:text-[5rem] font-semibold leading-[0.98] tracking-tighter max-w-4xl mx-auto mb-10 text-cream">
             Ready to make events
             <br />
             <span className="italic font-normal text-cream/75">your highest-converting channel?</span>
