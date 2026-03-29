@@ -4,7 +4,7 @@ import spaceInterior from "@/assets/space-interior.jpg";
 import detailHands from "@/assets/detail-hands.jpg";
 import venueWide from "@/assets/venue-wide.jpg";
 import tableOverhead from "@/assets/table-overhead.jpg";
-// Updated logo assets v2
+// Updated logo assets v3
 import logoYoutube from "@/assets/logos/youtube.png";
 import logoMeta from "@/assets/logos/meta.png";
 import logoPinterest from "@/assets/logos/pinterest.png";
