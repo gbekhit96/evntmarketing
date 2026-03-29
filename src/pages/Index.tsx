@@ -331,7 +331,28 @@ const Index = () => {
         </div>
       </section>
 
-      {/* MEASUREMENT — charcoal */}
+      {/* WHAT WE BUILD — warm off-white */}
+      <section className="py-28 md:py-36" style={{ backgroundColor: '#F5F0E8' }}>
+        <div className={W}>
+          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] mb-10" style={{ color: 'rgba(13,13,13,0.35)' }}>What We Build</h2>
+          <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight mb-16 md:mb-20" style={{ color: '#0D0D0D' }}>
+            One partner. Every type of event.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 md:gap-16">
+            {[
+              { title: "Strategy & Program Development", desc: "We audit your GTM goals, define your ideal audience, and build a repeatable event framework — so you're running a program, not a one-off calendar." },
+              { title: "Event Execution", desc: "From intimate executive dinners to flagship summits — concept, production, speakers, and on-the-ground execution. Built around your customer, not a template." },
+              { title: "Measurement & Attribution", desc: "Events tracked as campaigns. Attendee quality, pipeline influence, and deal acceleration tied directly into your CRM." },
+            ].map((s) => (
+              <div key={s.title} className="border-t pt-6" style={{ borderColor: 'rgba(13,13,13,0.12)' }}>
+                <h3 className="text-lg md:text-xl font-serif font-semibold mb-3" style={{ color: '#0D0D0D' }}>{s.title}</h3>
+                <p className="font-sans text-sm leading-relaxed" style={{ color: 'rgba(13,13,13,0.55)' }}>{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-charcoal py-28 md:py-36">
         <div className={`${W} grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16`}>
           <div className="md:col-span-5">
