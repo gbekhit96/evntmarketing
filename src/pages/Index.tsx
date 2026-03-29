@@ -63,20 +63,22 @@ const Index = () => {
       <section style={{ backgroundColor: '#0D0D0D' }} className="py-[60px]">
         <div className={W}>
           <p className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/25 mb-12 text-center">Trusted by teams at</p>
-          <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-10">
+          <div className="flex flex-wrap justify-center items-center gap-x-14 gap-y-10">
             {[
               { src: "https://cdn.simpleicons.org/tiktok/ffffff", alt: "TikTok" },
               { src: "https://cdn.simpleicons.org/meta/ffffff", alt: "Meta" },
               { src: "https://cdn.simpleicons.org/snapchat/ffffff", alt: "Snapchat" },
               { src: "https://cdn.simpleicons.org/youtube/ffffff", alt: "YouTube" },
               { src: "https://cdn.simpleicons.org/googlecloud/ffffff", alt: "Google Cloud" },
+              { src: "https://cdn.simpleicons.org/bmw/ffffff", alt: "BMW" },
+              { src: "https://cdn.simpleicons.org/pinterest/ffffff", alt: "Pinterest" },
             ].map((logo) => (
               <img
                 key={logo.alt}
                 src={logo.src}
                 alt={logo.alt}
-                style={{ height: '32px', width: 'auto' }}
-                className="object-contain opacity-50 brightness-0 invert"
+                style={{ height: '28px', width: 'auto' }}
+                className="object-contain opacity-60 brightness-0 invert"
                 loading="lazy"
               />
             ))}
