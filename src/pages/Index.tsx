@@ -103,7 +103,7 @@ const Index = () => {
       </section>
 
       {/* FULL-BLEED IMAGE */}
-      <section className="w-full h-[55vh] md:h-[75vh] overflow-hidden">
+      <section className="w-full overflow-hidden" style={{ height: '400px' }}>
         <img
           src={venueWide}
           alt="Premium event venue at dusk"
