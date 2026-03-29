@@ -21,12 +21,12 @@ const Index = () => {
       </nav>
 
       {/* HERO */}
-      <section className="bg-wine-deep pt-40 pb-40 md:pt-48 md:pb-52">
+      <section className="bg-wine-deep min-h-screen flex items-center">
         <div className={W}>
           <h1 className="font-semibold leading-[1.05] tracking-tighter max-w-5xl text-cream" style={{ fontSize: 'clamp(48px, 6vw, 80px)' }}>
             We don't plan events; <span className="italic font-normal text-cream/75">we build experiences that drive pipeline.</span>
           </h1>
-          <p className="mt-14 text-cream/50 font-sans text-sm max-w-sm leading-relaxed">
+          <p className="mt-6 text-cream/50 font-sans text-sm max-w-sm leading-relaxed">
             EVNT is a fractional events partner for B2B tech companies. Strategy, execution, and measurement — built as a growth channel.
           </p>
         </div>
