@@ -137,32 +137,15 @@ const Index = () => {
         </div>
       </section>
 
-      {/* IMAGE PAIR */}
-      <section className="bg-charcoal py-2">
-        <div className={W}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div className="overflow-hidden h-[350px] md:h-[450px]">
-              <img
-                src={eventDinnerTable}
-                alt="Immersive dinner experience"
-                className="w-full h-full object-cover object-center"
-                loading="lazy"
-                width={1920}
-                height={1080}
-              />
-            </div>
-            <div className="overflow-hidden h-[350px] md:h-[450px]">
-              <img
-                src={detailHands}
-                alt="Close-up detail at intimate gathering"
-                className="w-full h-full object-cover object-center"
-                loading="lazy"
-                width={1024}
-                height={1024}
-              />
-            </div>
-          </div>
-        </div>
+      <section className="w-full overflow-hidden" style={{ height: '500px' }}>
+        <img
+          src={eventDinnerTable}
+          alt="Immersive dinner experience"
+          className="w-full h-full object-cover"
+          loading="lazy"
+          width={1920}
+          height={1080}
+        />
       </section>
 
       {/* WHY EVNT */}
