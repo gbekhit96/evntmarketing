@@ -164,10 +164,10 @@ const Index = () => {
       </section>
 
       {/* HOW WE WORK */}
-      <section className="bg-wine-deep py-28 md:py-36">
+      <section className="bg-wine-deep py-20">
         <div className={W}>
-          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-10">How We Work</h2>
-          <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight text-cream max-w-3xl mb-16 md:mb-20">
+          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-3">How We Work</h2>
+          <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight text-cream max-w-3xl mb-10">
             Built around how your business actually grows.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 md:gap-16">
