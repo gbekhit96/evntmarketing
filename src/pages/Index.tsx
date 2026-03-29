@@ -7,6 +7,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 import tableSetting from "@/assets/table-setting.jpg";
 import detailHands from "@/assets/detail-hands.jpg";
 import venueWide from "@/assets/venue-wide.jpg";
+import kerryAnnePhoto from "@/assets/kerry-anne.jpg";
 
 const W = "max-w-[1200px] mx-auto px-6 md:px-12";
 
