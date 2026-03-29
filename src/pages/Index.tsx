@@ -21,21 +21,16 @@ const Index = () => {
       </nav>
 
       {/* HERO */}
-      <section className="bg-wine-deep pt-40 pb-28 md:pt-48 md:pb-36">
+      <section className="bg-wine-deep pt-40 pb-40 md:pt-48 md:pb-52">
         <div className={W}>
           <h1 className="text-5xl sm:text-7xl md:text-[7rem] lg:text-[9rem] font-semibold leading-[0.92] tracking-tighter max-w-6xl text-cream">
             We don't plan events.
             <br />
             <span className="italic font-normal text-cream/75">We build rooms where revenue happens.</span>
           </h1>
-          <div className="mt-14 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-10">
-            <p className="text-cream/50 font-sans text-sm max-w-sm leading-relaxed">
-              EVNT is a fractional events partner for B2B tech companies. Strategy, execution, and measurement — built as a growth channel.
-            </p>
-            <Button variant="editorial" size="lg" className="px-10 py-6 w-fit" asChild>
-              <a href="#contact">Get in Touch</a>
-            </Button>
-          </div>
+          <p className="mt-14 text-cream/50 font-sans text-sm max-w-sm leading-relaxed">
+            EVNT is a fractional events partner for B2B tech companies. Strategy, execution, and measurement — built as a growth channel.
+          </p>
         </div>
       </section>
 
