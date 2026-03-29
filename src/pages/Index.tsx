@@ -8,6 +8,7 @@ import tableSetting from "@/assets/table-setting.jpg";
 import detailHands from "@/assets/detail-hands.jpg";
 import venueWide from "@/assets/venue-wide.jpg";
 import kerryAnnePhoto from "@/assets/kerry-anne.jpg";
+import gabePhoto from "@/assets/gabe.jpg";
 
 const W = "max-w-[1200px] mx-auto px-6 md:px-12";
 
@@ -225,7 +226,7 @@ const Index = () => {
                 name: "Gabriel Bekhit",
                 title: "COO",
                 bio: "6 years building experiential strategy for BMW, Diageo, Patrón, and Publicis.",
-                photo: null,
+                photo: gabePhoto,
               },
             ].map((person) => (
               <div key={person.name}>
