@@ -35,7 +35,7 @@ const Index = () => {
       {/* CREDENTIAL BAR */}
       <section className="w-full" style={{ backgroundColor: '#0D0D0D' }}>
         <div className="border-t border-cream/10" />
-        <div className={`${W} py-14 md:py-16`}>
+        <div className={`${W} py-[60px]`}>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8 text-center">
             {[
               { num: "1,000+", label: "Events executed" },
