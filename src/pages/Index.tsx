@@ -77,7 +77,7 @@ const Index = () => {
                 key={logo.alt}
                 src={logo.src}
                 alt={logo.alt}
-                style={{ height: '28px', width: 'auto' }}
+                style={{ height: '31px', width: 'auto' }}
                 className="object-contain opacity-60 brightness-0 invert"
                 loading="lazy"
               />
