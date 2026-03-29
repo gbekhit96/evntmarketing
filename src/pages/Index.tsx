@@ -135,7 +135,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="w-full overflow-hidden" style={{ height: '520px' }}>
+      <section className="w-full overflow-hidden" style={{ height: '400px' }}>
         <img
           src={eventDinnerTable}
           alt="Immersive dinner experience"
