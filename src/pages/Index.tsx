@@ -33,7 +33,7 @@ const Index = () => {
             We don't plan events; <span className="italic font-normal text-cream/75">we build experiences that drive pipeline.</span>
           </h1>
           <p className="mt-6 text-cream/50 font-sans text-sm max-w-sm leading-relaxed">
-            EVNT is a fractional events partner for B2B tech companies. Strategy, execution, and measurement — built as a growth channel.
+            We embed with your team as a Fractional Chief Events Officer — turning events into a channel that shows up in your CRM.
           </p>
         </div>
       </section>
