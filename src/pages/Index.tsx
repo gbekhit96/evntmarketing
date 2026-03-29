@@ -186,7 +186,7 @@ const Index = () => {
       </section>
 
       {/* FULL-BLEED IMAGE 2 */}
-      <section className="w-full h-[45vh] md:h-[60vh] overflow-hidden">
+      <section className="w-full overflow-hidden" style={{ height: '400px' }}>
         <img
           src={spaceInterior}
           alt="Architectural event space with dramatic lighting"
