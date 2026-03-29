@@ -136,10 +136,10 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="w-full overflow-hidden" style={{ height: '400px' }}>
+      <section className="w-full overflow-hidden" style={{ height: '450px' }}>
         <img
-          src={eventDinnerTable}
-          alt="Immersive dinner experience"
+          src={patron360}
+          alt="Patrón 360 immersive brand activation event"
           className="w-full h-full object-cover object-center"
           loading="lazy"
           width={1920}
