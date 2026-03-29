@@ -47,6 +47,26 @@ const Index = () => {
         </div>
       </section>
 
+      {/* CREDENTIAL BAR */}
+      <section className="w-full" style={{ backgroundColor: '#0D0D0D' }}>
+        <div className="border-t border-cream/10" />
+        <div className={`${W} py-14 md:py-16`}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8 text-center">
+            {[
+              { num: "1,000+", label: "Events Executed" },
+              { num: "40+", label: "Enterprise Brands" },
+              { num: "$300M+", label: "Pipeline Generated" },
+            ].map((s) => (
+              <div key={s.num}>
+                <p className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-cream leading-none">{s.num}</p>
+                <p className="font-sans text-[10px] md:text-[11px] tracking-[0.25em] uppercase text-cream/40 mt-3">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="border-b border-cream/10" />
+      </section>
+
       {/* TRUSTED BY — logo grid */}
       <section className="bg-charcoal py-24 md:py-32 border-b border-cream/5">
         <div className={W}>
