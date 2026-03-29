@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import eventDinnerTable from "@/assets/event-dinner-table.jpg";
 import patron360 from "@/assets/patron-360.jpg";
 import spaceInterior from "@/assets/space-interior.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
 import tableSetting from "@/assets/table-setting.jpg";
 import detailHands from "@/assets/detail-hands.jpg";
 import venueWide from "@/assets/venue-wide.jpg";
@@ -23,8 +24,10 @@ const Index = () => {
       </nav>
 
       {/* HERO */}
-      <section className="bg-wine-deep min-h-screen flex items-center">
-        <div className={W}>
+      <section className="relative min-h-screen flex items-center">
+        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
+        <div className={`${W} relative z-10`}>
           <h1 className="font-semibold leading-[1.05] tracking-tighter max-w-5xl text-cream" style={{ fontSize: 'clamp(48px, 6vw, 80px)' }}>
             We don't plan events; <span className="italic font-normal text-cream/75">we build experiences that drive pipeline.</span>
           </h1>
