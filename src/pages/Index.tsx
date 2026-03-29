@@ -226,7 +226,7 @@ const Index = () => {
                 name: "Gabriel Bekhit",
                 title: "COO",
                 bio: "6 years building experiential strategy for BMW, Diageo, Patrón, and Publicis.",
-                photo: null,
+                photo: gabePhoto,
               },
             ].map((person) => (
               <div key={person.name}>
