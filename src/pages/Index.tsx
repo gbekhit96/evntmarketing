@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import eventDinnerTable from "@/assets/event-dinner-table.jpg";
 import patron360 from "@/assets/patron-360.jpg";
 import spaceInterior from "@/assets/space-interior.jpg";
+import tableSetting from "@/assets/table-setting.jpg";
 import detailHands from "@/assets/detail-hands.jpg";
 import venueWide from "@/assets/venue-wide.jpg";
 
@@ -104,11 +105,11 @@ const Index = () => {
       </section>
 
       {/* FULL-BLEED IMAGE */}
-      <section className="w-full overflow-hidden" style={{ height: '400px' }}>
+      <section className="w-full overflow-hidden" style={{ height: '450px' }}>
         <img
-          src={venueWide}
-          alt="Premium event venue at dusk"
-          className="w-full h-full object-cover"
+          src={tableSetting}
+          alt="Intimate dinner table setting with floral centerpiece"
+          className="w-full h-full object-cover object-center"
           width={1920}
           height={1080}
         />
