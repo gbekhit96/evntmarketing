@@ -1,3 +1,4 @@
+import { Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import eventDinnerTable from "@/assets/event-dinner-table.jpg";
 import spaceInterior from "@/assets/space-interior.jpg";
