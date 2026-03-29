@@ -137,11 +137,11 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="w-full overflow-hidden" style={{ height: '500px' }}>
+      <section className="w-full overflow-hidden" style={{ height: '520px' }}>
         <img
           src={eventDinnerTable}
           alt="Immersive dinner experience"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
           loading="lazy"
           width={1920}
           height={1080}
