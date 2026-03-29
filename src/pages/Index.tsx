@@ -358,21 +358,20 @@ const Index = () => {
       <section className="bg-wine-deep py-28 md:py-36">
         <div className={W}>
           <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-10">How We Work</h2>
-          <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight text-cream max-w-2xl mb-8">
-            We embed. We don't just execute.
+          <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight text-cream max-w-3xl mb-16 md:mb-20">
+            Built around how your business actually grows.
           </p>
-          <p className="font-sans text-sm leading-relaxed text-cream/50 max-w-xl mb-14">
-            EVNT operates as your Fractional Chief Events Officer — sitting inside your marketing and sales team, not outside it. We handle strategy on retainer and execute individual events on a project basis. You get senior-level ownership without the overhead of a full-time hire.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-2xl">
-            <div className="border-t border-cream/15 pt-6">
-              <h3 className="text-lg md:text-xl font-serif font-semibold text-cream mb-2">Retainer</h3>
-              <p className="font-sans text-sm leading-relaxed text-cream/45">Strategy, program development, and ongoing event management.</p>
-            </div>
-            <div className="border-t border-cream/15 pt-6">
-              <h3 className="text-lg md:text-xl font-serif font-semibold text-cream mb-2">Project</h3>
-              <p className="font-sans text-sm leading-relaxed text-cream/45">Individual event execution at a 25% management fee on total event budget.</p>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 md:gap-16">
+            {[
+              { title: "Retainer", desc: "We embed as your Fractional Chief Events Officer — owning strategy, program development, and ongoing management." },
+              { title: "Project", desc: "Individual events executed on a project basis. Full production, on-the-ground delivery, and post-event reporting." },
+              { title: "Creator", desc: "Integrate creator talent directly into your events. We handle sourcing, contracts, and activation." },
+            ].map((col) => (
+              <div key={col.title} className="border-t border-cream/15 pt-6">
+                <h3 className="text-xl md:text-2xl font-serif font-semibold text-cream mb-3">{col.title}</h3>
+                <p className="font-sans text-sm leading-relaxed text-cream/45">{col.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
