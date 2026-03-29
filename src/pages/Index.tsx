@@ -309,13 +309,25 @@ const Index = () => {
       <section className="bg-charcoal-light py-32 md:py-44">
         <div className={W}>
           <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-20">Why EVNT</h2>
-          <ul className="space-y-10 md:space-y-14 text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter max-w-4xl text-cream">
-            <li>Curated rooms, not crowded ones</li>
-            <li className="text-cream/60">Pipeline, not impressions</li>
-            <li>Programs, not one-offs</li>
-            <li className="text-cream/60">Measured like a growth channel</li>
-            <li>Built for revenue, not applause</li>
-          </ul>
+          <div className="space-y-16 md:space-y-20 max-w-4xl">
+            <div>
+              <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream">Curated rooms, not crowded ones</p>
+              <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">The goal is never to fill a room. It's to build the right one. Every event we design starts with a precise audience profile — who needs to be there, what would compel them to show up, and what they need to feel while they're in the room.</p>
+            </div>
+            <div>
+              <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream/60">Pipeline, not impressions</p>
+              <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">We track events the same way you track any other marketing channel — attendee quality, pipeline influence, deal acceleration, and conversion. If it doesn't show up in your CRM, it doesn't count.</p>
+            </div>
+            <div>
+              <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream">Programs, not one-offs</p>
+            </div>
+            <div>
+              <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream/60">Measured like a growth channel</p>
+            </div>
+            <div>
+              <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream">Built for revenue, not applause</p>
+            </div>
+          </div>
         </div>
       </section>
 
