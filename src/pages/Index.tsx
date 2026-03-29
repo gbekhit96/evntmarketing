@@ -4,13 +4,6 @@ import eventDinnerTable from "@/assets/event-dinner-table.jpg";
 import spaceInterior from "@/assets/space-interior.jpg";
 import detailHands from "@/assets/detail-hands.jpg";
 import venueWide from "@/assets/venue-wide.jpg";
-import logoYoutube from "@/assets/logos/youtube.png";
-import logoMeta from "@/assets/logos/meta.png";
-import logoPinterest from "@/assets/logos/pinterest.png";
-import logoSnapchat from "@/assets/logos/snapchat.png";
-import logoTiktok from "@/assets/logos/tiktok.png";
-import logoUnilever from "@/assets/logos/unilever.png";
-import logoBmw from "@/assets/logos/bmw.png";
 
 const W = "max-w-[1200px] mx-auto px-6 md:px-12";
 
