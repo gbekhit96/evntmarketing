@@ -21,12 +21,12 @@ const Index = () => {
       </nav>
 
       {/* HERO */}
-      <section className="bg-wine-deep pt-40 pb-40 md:pt-48 md:pb-52">
+      <section className="bg-wine-deep min-h-screen flex items-center">
         <div className={W}>
           <h1 className="font-semibold leading-[1.05] tracking-tighter max-w-5xl text-cream" style={{ fontSize: 'clamp(48px, 6vw, 80px)' }}>
             We don't plan events; <span className="italic font-normal text-cream/75">we build experiences that drive pipeline.</span>
           </h1>
-          <p className="mt-14 text-cream/50 font-sans text-sm max-w-sm leading-relaxed">
+          <p className="mt-6 text-cream/50 font-sans text-sm max-w-sm leading-relaxed">
             EVNT is a fractional events partner for B2B tech companies. Strategy, execution, and measurement — built as a growth channel.
           </p>
         </div>
@@ -35,7 +35,7 @@ const Index = () => {
       {/* CREDENTIAL BAR */}
       <section className="w-full" style={{ backgroundColor: '#0D0D0D' }}>
         <div className="border-t border-cream/10" />
-        <div className={`${W} py-14 md:py-16`}>
+        <div className={`${W} py-[60px]`}>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8 text-center">
             {[
               { num: "1,000+", label: "Events executed" },
@@ -80,11 +80,11 @@ const Index = () => {
       </section>
 
       {/* WHY NOW */}
-      <section style={{ backgroundColor: '#0D0D0D' }} className="py-28 md:py-36">
+      <section style={{ backgroundColor: '#0D0D0D' }} className="py-20">
         <div className={`${W} grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-20`}>
           <div className="md:col-span-7">
-            <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-10">Why Now</h2>
-            <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight text-cream max-w-xl mb-8">
+            <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-3">Why Now</h2>
+            <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight text-cream max-w-xl mb-4">
               Every other channel is getting noisier. This one is getting more valuable.
             </p>
             <p className="font-sans text-sm md:text-[15px] leading-relaxed text-cream/55 max-w-lg">
@@ -103,7 +103,7 @@ const Index = () => {
       </section>
 
       {/* FULL-BLEED IMAGE */}
-      <section className="w-full h-[55vh] md:h-[75vh] overflow-hidden">
+      <section className="w-full overflow-hidden" style={{ height: '400px' }}>
         <img
           src={venueWide}
           alt="Premium event venue at dusk"
@@ -114,10 +114,10 @@ const Index = () => {
       </section>
 
       {/* WHAT WE BUILD */}
-      <section className="py-28 md:py-36" style={{ backgroundColor: '#F5F0E8' }}>
+      <section className="py-20" style={{ backgroundColor: '#F5F0E8' }}>
         <div className={W}>
-          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] mb-10" style={{ color: 'rgba(13,13,13,0.35)' }}>What We Build</h2>
-          <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight mb-16 md:mb-20" style={{ color: '#0D0D0D' }}>
+          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] mb-3" style={{ color: 'rgba(13,13,13,0.35)' }}>What We Build</h2>
+          <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight mb-10" style={{ color: '#0D0D0D' }}>
             One partner. Every format.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 md:gap-16">
@@ -135,7 +135,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="w-full overflow-hidden" style={{ height: '520px' }}>
+      <section className="w-full overflow-hidden" style={{ height: '400px' }}>
         <img
           src={eventDinnerTable}
           alt="Immersive dinner experience"
@@ -147,10 +147,10 @@ const Index = () => {
       </section>
 
       {/* WHY EVNT */}
-      <section className="bg-charcoal-light py-32 md:py-44">
+      <section className="bg-charcoal-light py-20">
         <div className={W}>
-          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-20">Why EVNT</h2>
-          <div className="space-y-16 md:space-y-20 max-w-4xl">
+          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-3">Why EVNT</h2>
+          <div className="space-y-12 max-w-4xl">
             <div>
               <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream">Curated rooms, not crowded ones.</p>
               <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">We don't measure success by attendance. We measure it by who's in the room and what happens after.</p>
@@ -164,10 +164,10 @@ const Index = () => {
       </section>
 
       {/* HOW WE WORK */}
-      <section className="bg-wine-deep py-28 md:py-36">
+      <section className="bg-wine-deep py-20">
         <div className={W}>
-          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-10">How We Work</h2>
-          <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight text-cream max-w-3xl mb-16 md:mb-20">
+          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-3">How We Work</h2>
+          <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight text-cream max-w-3xl mb-10">
             Built around how your business actually grows.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 md:gap-16">
@@ -186,7 +186,7 @@ const Index = () => {
       </section>
 
       {/* FULL-BLEED IMAGE 2 */}
-      <section className="w-full h-[45vh] md:h-[60vh] overflow-hidden">
+      <section className="w-full overflow-hidden" style={{ height: '400px' }}>
         <img
           src={spaceInterior}
           alt="Architectural event space with dramatic lighting"
@@ -198,13 +198,13 @@ const Index = () => {
       </section>
 
       {/* THE TEAM */}
-      <section className="py-28 md:py-36" style={{ backgroundColor: '#F5F0E8' }}>
+      <section className="py-20" style={{ backgroundColor: '#F5F0E8' }}>
         <div className={W}>
-          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] mb-10" style={{ color: 'rgba(13,13,13,0.35)' }}>The Team</h2>
+          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] mb-3" style={{ color: 'rgba(13,13,13,0.35)' }}>The Team</h2>
           <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight mb-4" style={{ color: '#0D0D0D' }}>
             Senior operators. Not account managers.
           </p>
-          <p className="font-sans text-sm leading-relaxed mb-16 md:mb-20" style={{ color: 'rgba(13,13,13,0.55)' }}>
+          <p className="font-sans text-sm leading-relaxed mb-10" style={{ color: 'rgba(13,13,13,0.55)' }}>
             Every engagement is led by Kerry-Anne and Gabe — not handed to a junior team.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-14 md:gap-20 max-w-3xl">
@@ -232,9 +232,9 @@ const Index = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section id="contact" className="bg-wine-deep py-36 md:py-48">
+      <section id="contact" className="bg-wine-deep py-20">
         <div className={`${W} text-center`}>
-          <h2 className="text-4xl sm:text-5xl md:text-[5rem] font-semibold leading-[0.98] tracking-tighter max-w-4xl mx-auto mb-14 text-cream">
+          <h2 className="text-4xl sm:text-5xl md:text-[5rem] font-semibold leading-[0.98] tracking-tighter max-w-4xl mx-auto mb-10 text-cream">
             Ready to make events
             <br />
             <span className="italic font-normal text-cream/75">your highest-converting channel?</span>
