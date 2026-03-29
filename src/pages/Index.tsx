@@ -376,7 +376,37 @@ const Index = () => {
         </div>
       </section>
 
-      {/* MEASUREMENT — charcoal */}
+      {/* THE TEAM — warm off-white */}
+      <section className="py-28 md:py-36" style={{ backgroundColor: '#F5F0E8' }}>
+        <div className={W}>
+          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] mb-10" style={{ color: 'rgba(13,13,13,0.35)' }}>The Team</h2>
+          <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight mb-16 md:mb-20" style={{ color: '#0D0D0D' }}>
+            Senior operators, not account managers.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-14 md:gap-20 max-w-3xl">
+            {[
+              {
+                name: "Kerry-Anne Hamilton",
+                title: "CEO",
+                bio: "10+ years in experiential and growth marketing. $100M+ in pipeline driven through events. 750+ events executed across TikTok, Meta, Snapchat, YouTube, and #paid. Creator of the Creator Marketing Summit.",
+              },
+              {
+                name: "Gabriel Bekhit",
+                title: "COO",
+                bio: "6 years building experiential strategy for global enterprise brands including BMW, Diageo, Publicis, and Patrón.",
+              },
+            ].map((person) => (
+              <div key={person.name}>
+                <div className="w-full aspect-[3/4] mb-6 overflow-hidden" style={{ backgroundColor: '#DDD8CE' }} />
+                <h3 className="text-xl md:text-2xl font-serif font-semibold" style={{ color: '#0D0D0D' }}>{person.name}</h3>
+                <p className="font-sans text-[10px] md:text-[11px] tracking-[0.25em] uppercase mt-1 mb-4" style={{ color: 'rgba(13,13,13,0.4)' }}>{person.title}</p>
+                <p className="font-sans text-sm leading-relaxed" style={{ color: 'rgba(13,13,13,0.55)' }}>{person.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-charcoal py-28 md:py-36">
         <div className={`${W} grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16`}>
           <div className="md:col-span-5">
