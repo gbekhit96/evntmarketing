@@ -353,7 +353,29 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="bg-charcoal py-28 md:py-36">
+      {/* HOW WE WORK — burgundy */}
+      <section className="bg-wine-deep py-28 md:py-36">
+        <div className={W}>
+          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-10">How We Work</h2>
+          <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight text-cream max-w-2xl mb-8">
+            We embed. We don't just execute.
+          </p>
+          <p className="font-sans text-sm leading-relaxed text-cream/50 max-w-xl mb-14">
+            EVNT operates as your Fractional Chief Events Officer — sitting inside your marketing and sales team, not outside it. We handle strategy on retainer and execute individual events on a project basis. You get senior-level ownership without the overhead of a full-time hire.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-2xl">
+            <div className="border-t border-cream/15 pt-6">
+              <h3 className="text-lg md:text-xl font-serif font-semibold text-cream mb-2">Retainer</h3>
+              <p className="font-sans text-sm leading-relaxed text-cream/45">Strategy, program development, and ongoing event management.</p>
+            </div>
+            <div className="border-t border-cream/15 pt-6">
+              <h3 className="text-lg md:text-xl font-serif font-semibold text-cream mb-2">Project</h3>
+              <p className="font-sans text-sm leading-relaxed text-cream/45">Individual event execution at a 25% management fee on total event budget.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
         <div className={`${W} grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16`}>
           <div className="md:col-span-5">
             <h2 className="text-3xl sm:text-4xl md:text-[3.25rem] font-semibold leading-[1.05] tracking-tighter text-cream">
