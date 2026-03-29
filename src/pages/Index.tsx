@@ -124,9 +124,9 @@ const Index = () => {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 md:gap-16">
             {[
-              { title: "Executive Dinners & Roundtables", desc: "The highest-signal room you can put a prospect in." },
-              { title: "Field Events & Activations", desc: "From roadshows to flagship summits — built around your customer, not a template." },
-              { title: "Conferences & Summits", desc: "Owned IP that positions your brand as the convener of your industry." },
+              { title: "Intimate & High-Touch", desc: "Executive dinners, roundtables, and curated experiences. The highest-signal room you can put a buyer in." },
+              { title: "Field & Activation", desc: "Pop-ups, roadshows, brand activations, and creator-integrated experiences. Built for reach that converts." },
+              { title: "Flagship & Owned IP", desc: "Conferences, summits, and retreat programs that position your brand as the convener of your industry." },
             ].map((s) => (
               <div key={s.title} className="border-t pt-6" style={{ borderColor: 'rgba(13,13,13,0.12)' }}>
                 <h3 className="text-lg md:text-xl font-serif font-semibold mb-3" style={{ color: '#0D0D0D' }}>{s.title}</h3>
