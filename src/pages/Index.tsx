@@ -1,6 +1,7 @@
 import { Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import eventDinnerTable from "@/assets/event-dinner-table.jpg";
+import patron360 from "@/assets/patron-360.jpg";
 import spaceInterior from "@/assets/space-interior.jpg";
 import detailHands from "@/assets/detail-hands.jpg";
 import venueWide from "@/assets/venue-wide.jpg";
@@ -135,10 +136,10 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="w-full overflow-hidden" style={{ height: '400px' }}>
+      <section className="w-full overflow-hidden" style={{ height: '450px' }}>
         <img
-          src={eventDinnerTable}
-          alt="Immersive dinner experience"
+          src={patron360}
+          alt="Patrón 360 immersive brand activation event"
           className="w-full h-full object-cover object-center"
           loading="lazy"
           width={1920}
