@@ -7,6 +7,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 import tableSetting from "@/assets/table-setting.jpg";
 import detailHands from "@/assets/detail-hands.jpg";
 import venueWide from "@/assets/venue-wide.jpg";
+import kerryAnnePhoto from "@/assets/kerry-anne.jpg";
 
 const W = "max-w-[1200px] mx-auto px-6 md:px-12";
 
@@ -218,15 +219,21 @@ const Index = () => {
                 name: "Kerry-Anne Hamilton",
                 title: "CEO",
                 bio: "10+ years in experiential marketing. $100M+ in pipeline. Architect of events programs at TikTok, Meta, Snapchat, YouTube, and #paid.",
+                photo: kerryAnnePhoto,
               },
               {
                 name: "Gabriel Bekhit",
                 title: "COO",
                 bio: "6 years building experiential strategy for BMW, Diageo, Patrón, and Publicis.",
+                photo: null,
               },
             ].map((person) => (
               <div key={person.name}>
-                <div className="w-full aspect-[3/4] mb-6 overflow-hidden" style={{ backgroundColor: '#DDD8CE' }} />
+                {person.photo ? (
+                  <img src={person.photo} alt={person.name} className="w-full aspect-[3/4] mb-6 object-cover object-top" />
+                ) : (
+                  <div className="w-full aspect-[3/4] mb-6 overflow-hidden" style={{ backgroundColor: '#DDD8CE' }} />
+                )}
                 <h3 className="text-xl md:text-2xl font-serif font-semibold" style={{ color: '#0D0D0D' }}>{person.name}</h3>
                 <p className="font-sans text-[10px] md:text-[11px] tracking-[0.25em] uppercase mt-1 mb-4" style={{ color: 'rgba(13,13,13,0.4)' }}>{person.title}</p>
                 <p className="font-sans text-sm leading-relaxed" style={{ color: 'rgba(13,13,13,0.55)' }}>{person.bio}</p>
