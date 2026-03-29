@@ -59,7 +59,7 @@ const Index = () => {
       </section>
 
       {/* TRUSTED BY */}
-      <section style={{ backgroundColor: '#0D0D0D' }} className="py-[60px]">
+      <section style={{ backgroundColor: '#0D0D0D' }} className="pt-[60px] pb-6">
         <div className={W}>
           <p className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/25 mb-12 text-center">Trusted by teams at</p>
           <div className="flex flex-wrap justify-center items-center gap-x-14 gap-y-10">
