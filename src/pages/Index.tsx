@@ -80,11 +80,11 @@ const Index = () => {
       </section>
 
       {/* WHY NOW */}
-      <section style={{ backgroundColor: '#0D0D0D' }} className="py-28 md:py-36">
+      <section style={{ backgroundColor: '#0D0D0D' }} className="py-20">
         <div className={`${W} grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-20`}>
           <div className="md:col-span-7">
-            <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-10">Why Now</h2>
-            <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight text-cream max-w-xl mb-8">
+            <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-3">Why Now</h2>
+            <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight text-cream max-w-xl mb-4">
               Every other channel is getting noisier. This one is getting more valuable.
             </p>
             <p className="font-sans text-sm md:text-[15px] leading-relaxed text-cream/55 max-w-lg">
