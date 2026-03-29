@@ -376,6 +376,8 @@ const Index = () => {
         </div>
       </section>
 
+      {/* MEASUREMENT — charcoal */}
+      <section className="bg-charcoal py-28 md:py-36">
         <div className={`${W} grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16`}>
           <div className="md:col-span-5">
             <h2 className="text-3xl sm:text-4xl md:text-[3.25rem] font-semibold leading-[1.05] tracking-tighter text-cream">
