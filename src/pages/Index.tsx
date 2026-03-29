@@ -67,7 +67,40 @@ const Index = () => {
         <div className="border-b border-cream/10" />
       </section>
 
-      {/* TRUSTED BY — logo grid */}
+      {/* WHY NOW — editorial data section */}
+      <section style={{ backgroundColor: '#0D0D0D' }} className="py-28 md:py-36">
+        <div className={`${W} grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-20`}>
+          <div className="md:col-span-7">
+            <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-10">Why Now</h2>
+            <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight text-cream max-w-xl mb-14">
+              Every other channel is getting harder. Events are getting more valuable.
+            </p>
+            <div className="space-y-6">
+              {[
+                "Cold outreach converts at 2–3%. Events convert at 18–25%.",
+                "AI-generated content has made trust harder to earn online.",
+                "In-person connection is now a competitive advantage.",
+              ].map((statement) => (
+                <p
+                  key={statement}
+                  className="border-l-2 border-wine pl-5 font-sans text-sm md:text-[15px] leading-relaxed text-cream/55"
+                >
+                  {statement}
+                </p>
+              ))}
+            </div>
+          </div>
+          <div className="md:col-span-4 md:col-start-9 flex flex-col justify-center items-start md:items-end text-left md:text-right">
+            <p className="text-7xl sm:text-8xl md:text-[8rem] lg:text-[10rem] font-serif font-bold tracking-tighter leading-none text-cream">
+              21%
+            </p>
+            <p className="font-sans text-[11px] md:text-xs tracking-[0.12em] uppercase text-cream/35 mt-4 max-w-[220px]">
+              average event conversion rate vs. 2–3% for cold outreach
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-charcoal py-24 md:py-32 border-b border-cream/5">
         <div className={W}>
           <p className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/25 mb-16 text-center">Trusted by teams at</p>
