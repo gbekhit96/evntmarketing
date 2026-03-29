@@ -147,10 +147,10 @@ const Index = () => {
       </section>
 
       {/* WHY EVNT */}
-      <section className="bg-charcoal-light py-32 md:py-44">
+      <section className="bg-charcoal-light py-20">
         <div className={W}>
-          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-20">Why EVNT</h2>
-          <div className="space-y-16 md:space-y-20 max-w-4xl">
+          <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-3">Why EVNT</h2>
+          <div className="space-y-12 max-w-4xl">
             <div>
               <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream">Curated rooms, not crowded ones.</p>
               <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">We don't measure success by attendance. We measure it by who's in the room and what happens after.</p>
