@@ -158,7 +158,7 @@ const Index = () => {
               <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">We don't measure success by attendance. We measure it by who's in the room and what happens after.</p>
             </div>
             <div>
-              <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream/60">Pipeline, not impressions.</p>
+              <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream">Pipeline, not impressions.</p>
               <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">Every event we run is tracked as a marketing channel — attendee quality, pipeline influence, and deal velocity. In your CRM.</p>
             </div>
           </div>
