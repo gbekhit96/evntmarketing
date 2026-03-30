@@ -1,22 +1,27 @@
-import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  Marker,
+} from "react-simple-maps";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
-const northAmericaIds = ["840", "124", "484"]; // USA, Canada, Mexico
+const northAmericaIds = ["840", "124", "484"];
 
-const cities = [
-  { name: "Vancouver, BC", coordinates: [-123.1, 49.2] as [number, number] },
-  { name: "San Francisco, CA", coordinates: [-122.4, 37.8] as [number, number] },
-  { name: "Los Angeles, CA", coordinates: [-118.2, 34.1] as [number, number] },
-  { name: "Las Vegas, NV", coordinates: [-115.1, 36.2] as [number, number] },
-  { name: "Denver, CO", coordinates: [-104.9, 39.7] as [number, number] },
-  { name: "Chicago, IL", coordinates: [-87.6, 41.9] as [number, number] },
-  { name: "Toronto, ON", coordinates: [-79.4, 43.7] as [number, number] },
-  { name: "Boston, MA", coordinates: [-71.1, 42.4] as [number, number] },
-  { name: "New York, NY", coordinates: [-74.0, 40.7] as [number, number] },
-  { name: "Washington, DC", coordinates: [-77.0, 38.9] as [number, number] },
-  { name: "Atlanta, GA", coordinates: [-84.4, 33.7] as [number, number] },
-  { name: "Miami, FL", coordinates: [-80.2, 25.8] as [number, number] },
+const cities: { name: string; coordinates: [number, number] }[] = [
+  { name: "Vancouver, BC", coordinates: [-123.1, 49.2] },
+  { name: "San Francisco, CA", coordinates: [-122.4, 37.8] },
+  { name: "Los Angeles, CA", coordinates: [-118.2, 34.1] },
+  { name: "Las Vegas, NV", coordinates: [-115.1, 36.2] },
+  { name: "Denver, CO", coordinates: [-104.9, 39.7] },
+  { name: "Chicago, IL", coordinates: [-87.6, 41.9] },
+  { name: "Toronto, ON", coordinates: [-79.4, 43.7] },
+  { name: "Boston, MA", coordinates: [-71.1, 42.4] },
+  { name: "New York, NY", coordinates: [-74.0, 40.7] },
+  { name: "Washington, DC", coordinates: [-77.0, 38.9] },
+  { name: "Atlanta, GA", coordinates: [-84.4, 33.7] },
+  { name: "Miami, FL", coordinates: [-80.2, 25.8] },
 ];
 
 const NorthAmericaMap = () => (
@@ -26,7 +31,7 @@ const NorthAmericaMap = () => (
       style={{ width: "100%", height: "100%" }}
     >
       <Geographies geography={geoUrl}>
-        {({ geographies }) =>
+        {({ geographies }: { geographies: any[] }) =>
           geographies
             .filter((geo) => northAmericaIds.includes(geo.id))
             .map((geo) => (
