@@ -41,6 +41,7 @@ const Index = () => {
             <p className="font-sans font-normal" style={{ fontSize: '16px', color: '#F9FAF6', letterSpacing: '0' }}>
               Your events should be generating pipeline. We make sure they do.
             </p>
+            </div>
           </div>
         </div>
       </section>
