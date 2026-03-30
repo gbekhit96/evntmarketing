@@ -29,7 +29,7 @@ const Index = () => {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center">
         <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
-        <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
+        <div className="absolute inset-0 bg-black/[0.55]" aria-hidden="true" />
         <div className={`${W} relative z-10`}>
           <h1 className="font-semibold leading-[1.05] tracking-tighter max-w-5xl text-cream" style={{ fontSize: 'clamp(48px, 6vw, 80px)' }}>
             We don't plan events; <span className="italic font-normal text-cream/75">we build experiences that drive pipeline.</span>
