@@ -10,6 +10,7 @@ import venueWide from "@/assets/venue-wide.jpg";
 import kerryAnnePhoto from "@/assets/kerry-anne.jpg";
 import gabePhoto from "@/assets/gabe.jpg";
 import NorthAmericaMap from "@/components/NorthAmericaMap";
+import CaseStudies from "@/components/CaseStudies";
 
 const W = "max-w-[1200px] mx-auto px-6 md:px-12";
 
