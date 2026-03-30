@@ -2,7 +2,7 @@ import { Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import eventDinnerTable from "@/assets/event-dinner-table.jpg";
 import patron360 from "@/assets/patron-360.jpg";
-import spaceInterior from "@/assets/space-interior.jpg";
+import spaceInterior from "@/assets/patron-360-divider.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 import tableSetting from "@/assets/table-setting.jpg";
 import detailHands from "@/assets/detail-hands.jpg";
