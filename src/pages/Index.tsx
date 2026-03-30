@@ -259,6 +259,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* OUR WORK */}
+      <CaseStudies />
+
       {/* FINAL CTA */}
       <section id="contact" className="bg-wine-deep py-20">
         <div className={`${W} text-center`}>
