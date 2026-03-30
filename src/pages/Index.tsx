@@ -275,7 +275,7 @@ const Index = () => {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ backgroundColor: '#0D0D0D' }} className="border-t border-wine">
+      <footer style={{ backgroundColor: '#0A0707' }} className="border-t border-wine">
         <div className={`${W} py-14 md:py-16`}>
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <span className="font-serif text-lg font-semibold tracking-tight text-cream">EVNT</span>
