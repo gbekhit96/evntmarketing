@@ -25,7 +25,7 @@ const cities: { name: string; coordinates: [number, number] }[] = [
 ];
 
 const NorthAmericaMap = () => (
-  <div style={{ width: "100%", height: "500px", backgroundColor: "#0a0a0a" }}>
+  <div style={{ width: "100%", height: "500px", backgroundColor: "#0A0707" }}>
     <ComposableMap
       projection="geoAlbersUsa"
       projectionConfig={{ scale: 1050 }}
@@ -41,8 +41,8 @@ const NorthAmericaMap = () => (
               <Geography
                 key={geo.rsmKey}
                 geography={geo}
-                fill="#1a3d35"
-                stroke="#0a0a0a"
+                fill="#141D11"
+                stroke="#0A0707"
                 strokeWidth={0.5}
                 style={{
                   default: { outline: "none" },
@@ -55,7 +55,7 @@ const NorthAmericaMap = () => (
       </Geographies>
       {cities.map((city) => (
         <Marker key={city.name} coordinates={city.coordinates}>
-          <circle r={6} fill="#4ecdc4" />
+          <circle r={6} fill="#61C3A7" />
           <text
             x={10}
             y={4}

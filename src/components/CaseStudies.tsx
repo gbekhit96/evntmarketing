@@ -20,7 +20,7 @@ const caseStudies = [
 ];
 
 const CaseStudies = () => (
-  <section style={{ backgroundColor: "#0a0a0a", paddingTop: "100px", paddingBottom: "80px" }}>
+  <section style={{ backgroundColor: "#0A0707", paddingTop: "100px", paddingBottom: "80px" }}>
     <div className="max-w-[1200px] mx-auto px-6 md:px-12">
       <p className="text-[11px] font-sans uppercase mb-3" style={{ color: "#9a9a9a", letterSpacing: "0.1em" }}>
         Our Work
@@ -35,8 +35,8 @@ const CaseStudies = () => (
             className="flex flex-col justify-between"
             style={{
               height: "280px",
-              backgroundColor: "#141414",
-              border: "1px solid #2a2a2a",
+              backgroundColor: "#120D0D",
+              border: "1px solid #2a2020",
               padding: "32px",
             }}
           >

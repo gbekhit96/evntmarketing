@@ -42,7 +42,7 @@ const Index = () => {
       </section>
 
       {/* CREDENTIAL BAR */}
-      <section className="w-full" style={{ backgroundColor: '#0D0D0D' }}>
+      <section className="w-full" style={{ backgroundColor: '#0A0707' }}>
         <div className="border-t border-cream/10" />
         <div className={`${W} py-[60px]`}>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8 text-center">
@@ -62,7 +62,7 @@ const Index = () => {
       </section>
 
       {/* TRUSTED BY */}
-      <section style={{ backgroundColor: '#0D0D0D' }} className="pt-[60px] pb-6">
+      <section style={{ backgroundColor: '#0A0707' }} className="pt-[60px] pb-6">
         <div className={W}>
           <p className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/25 mb-12 text-center">Trusted by teams at</p>
           <div className="flex flex-wrap justify-center items-center gap-x-14 gap-y-10">
@@ -89,7 +89,7 @@ const Index = () => {
       </section>
 
       {/* WHY NOW */}
-      <section style={{ backgroundColor: '#0D0D0D' }} className="py-20">
+      <section style={{ backgroundColor: '#0A0707' }} className="py-20">
         <div className={`${W} grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-20`}>
           <div className="md:col-span-7">
             <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-3">Why Now</h2>
@@ -123,7 +123,7 @@ const Index = () => {
       </section>
 
       {/* WHAT WE BUILD */}
-      <section className="py-20" style={{ backgroundColor: '#F5F0E8' }}>
+      <section className="py-20" style={{ backgroundColor: '#F9FAF6' }}>
         <div className={W}>
           <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] mb-3" style={{ color: 'rgba(13,13,13,0.35)' }}>What We Build</h2>
           <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight mb-10" style={{ color: '#0D0D0D' }}>
@@ -207,7 +207,7 @@ const Index = () => {
       </section>
 
       {/* THE TEAM */}
-      <section className="py-20" style={{ backgroundColor: '#F5F0E8' }}>
+      <section className="py-20" style={{ backgroundColor: '#F9FAF6' }}>
         <div className={W}>
           <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] mb-3" style={{ color: 'rgba(13,13,13,0.35)' }}>The Team</h2>
           <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight mb-4" style={{ color: '#0D0D0D' }}>
@@ -247,7 +247,7 @@ const Index = () => {
       </section>
 
       {/* WHERE WE WORK */}
-      <section style={{ backgroundColor: '#0a0a0a', paddingTop: '100px', paddingBottom: '80px' }}>
+      <section style={{ backgroundColor: '#0A0707', paddingTop: '100px', paddingBottom: '80px' }}>
         <div className={W}>
           <p className="text-[11px] font-sans uppercase tracking-[0.1em] mb-3" style={{ color: '#9a9a9a' }}>Where We Work</p>
           <h2 className="text-3xl sm:text-4xl md:text-[48px] font-serif leading-[1.1] tracking-tight text-white mb-10" style={{ fontWeight: 900 }}>
@@ -275,7 +275,7 @@ const Index = () => {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ backgroundColor: '#0D0D0D' }} className="border-t border-wine">
+      <footer style={{ backgroundColor: '#0A0707' }} className="border-t border-wine">
         <div className={`${W} py-14 md:py-16`}>
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <span className="font-serif text-lg font-semibold tracking-tight text-cream">EVNT</span>
