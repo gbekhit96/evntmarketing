@@ -41,8 +41,8 @@ const NorthAmericaMap = () => (
               <Geography
                 key={geo.rsmKey}
                 geography={geo}
-                fill="#1a3d35"
-                stroke="#0a0a0a"
+                fill="#141D11"
+                stroke="#0A0707"
                 strokeWidth={0.5}
                 style={{
                   default: { outline: "none" },
