@@ -1,21 +1,21 @@
 const caseStudies = [
   {
-    gif: "/lovable-uploads/paid-creator-summit.gif",
+    photo: "/lovable-uploads/paid-cms.jpg",
     client: "#PAID",
-    headline: "Sold-out summit. $2M+ in pipeline.",
-    body: "EVNT built and ran the Creator Marketing Summit end-to-end — strategy, production, and attendee acquisition.",
+    headline: "350 people. One room. A conference that actually converted.",
+    body: "We ideated, built, and ran the Creator Marketing Summit from scratch — and rebooked it. Now title-sponsored by YouTube.",
   },
   {
-    gif: "/lovable-uploads/youtube-sneaker-workshop.gif",
+    photo: "/lovable-uploads/youtube-sneaker.jpg",
     client: "YOUTUBE",
-    headline: "One workshop. A room full of the right creators.",
-    body: "An intimate sneaker-culture experience that connected YouTube's creator partners with the brand in a high-signal environment.",
+    headline: "The best sales meeting they never saw coming.",
+    body: "50 internal reps. A custom sneaker. Thought leadership that stuck. Pipeline that followed.",
   },
   {
-    gif: "/lovable-uploads/asap-shopping-experience.gif",
-    client: "ASAP",
-    headline: "A shopping experience that felt like a cultural moment.",
-    body: "An immersive retail activation blending music, fashion, and community — designed to convert attention into connection.",
+    photo: "/lovable-uploads/tiktok-aesop.jpg",
+    client: "TIKTOK",
+    headline: "The deal starts before the deck.",
+    body: "We put TikTok's team and #paid creators in an Aesop store. Relationships built. Conversations started. Conversions followed.",
   },
 ];
 
@@ -31,18 +31,17 @@ const CaseStudies = () => (
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {caseStudies.map((study) => (
           <div key={study.client} className="relative overflow-hidden" style={{ height: "420px" }}>
-            {/* Media area - top 60% */}
-            <div className="absolute inset-x-0 top-0" style={{ height: "60%" }}>
+            {/* Photo area - top 55% */}
+            <div className="absolute inset-x-0 top-0" style={{ height: "55%" }}>
               <img
-                src={study.gif}
+                src={study.photo}
                 alt={study.headline}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
                 loading="lazy"
               />
-              <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.35)" }} />
             </div>
-            {/* Text area - bottom 40% */}
-            <div className="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-center" style={{ height: "40%", backgroundColor: "#0a0a0a" }}>
+            {/* Text area - bottom 45% */}
+            <div className="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-center" style={{ height: "45%", backgroundColor: "#0a0a0a" }}>
               <p className="text-[11px] uppercase text-white mb-2" style={{ letterSpacing: "0.15em", opacity: 0.6 }}>
                 {study.client}
               </p>
