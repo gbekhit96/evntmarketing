@@ -25,7 +25,7 @@ const cities: { name: string; coordinates: [number, number] }[] = [
 ];
 
 const NorthAmericaMap = () => (
-  <div style={{ width: "100%", height: "500px", backgroundColor: "#0a0a0a" }}>
+  <div style={{ width: "100%", height: "500px", backgroundColor: "#0A0707" }}>
     <ComposableMap
       projection="geoAlbersUsa"
       projectionConfig={{ scale: 1050 }}
