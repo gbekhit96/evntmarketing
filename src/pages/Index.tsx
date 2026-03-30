@@ -36,7 +36,7 @@ const Index = () => {
             We don't plan events; <span className="italic font-normal" style={{ color: '#F9FAF6' }}>we build experiences that drive pipeline.</span>
           </h1>
           <p className="mt-6 text-cream/50 font-sans text-sm max-w-sm leading-relaxed">
-            We embed with your team as a Fractional Chief Events Officer — turning events into a channel that shows up in your CRM.
+            Your events should be generating pipeline. We make sure they do.
           </p>
         </div>
       </section>
