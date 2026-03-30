@@ -42,7 +42,7 @@ const Index = () => {
       </section>
 
       {/* CREDENTIAL BAR */}
-      <section className="w-full" style={{ backgroundColor: '#0D0D0D' }}>
+      <section className="w-full" style={{ backgroundColor: '#0A0707' }}>
         <div className="border-t border-cream/10" />
         <div className={`${W} py-[60px]`}>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8 text-center">
