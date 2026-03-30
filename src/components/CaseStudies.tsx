@@ -30,28 +30,16 @@ const CaseStudies = () => (
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {caseStudies.map((study) => (
-          <div key={study.client} className="relative overflow-hidden" style={{ height: "420px" }}>
-            {/* Photo area - top 55% */}
-            <div className="absolute inset-x-0 top-0" style={{ height: "55%" }}>
-              <img
-                src={study.photo}
-                alt={study.headline}
-                className="w-full h-full object-cover object-center"
-                loading="lazy"
-              />
-            </div>
-            {/* Text area - bottom 45% */}
-            <div className="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-center" style={{ height: "45%", backgroundColor: "#0a0a0a" }}>
-              <p className="text-[11px] uppercase text-white mb-2" style={{ letterSpacing: "0.15em", opacity: 0.6 }}>
-                {study.client}
-              </p>
-              <p className="text-white font-bold leading-[1.3]" style={{ fontSize: "20px" }}>
-                {study.headline}
-              </p>
-              <p style={{ color: "#9a9a9a", fontSize: "13px", marginTop: "8px" }}>
-                {study.body}
-              </p>
-            </div>
+          <div key={study.client} className="flex flex-col" style={{ height: "320px", backgroundColor: "#0a0a0a", padding: "24px" }}>
+            <p className="text-[11px] uppercase" style={{ color: "#9a9a9a", letterSpacing: "0.15em" }}>
+              {study.client}
+            </p>
+            <p className="text-white font-bold leading-[1.3]" style={{ fontSize: "22px", marginTop: "12px" }}>
+              {study.headline}
+            </p>
+            <p style={{ color: "#9a9a9a", fontSize: "13px", marginTop: "8px" }}>
+              {study.body}
+            </p>
           </div>
         ))}
       </div>
