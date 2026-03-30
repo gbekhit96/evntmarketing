@@ -35,9 +35,11 @@ const Index = () => {
           <h1 className="font-semibold leading-[1.05] tracking-tighter max-w-5xl" style={{ fontSize: 'clamp(48px, 6vw, 80px)', color: '#F9FAF6' }}>
             We don't plan events; <span className="italic font-normal" style={{ color: '#F9FAF6' }}>we build experiences that drive pipeline.</span>
           </h1>
-          <p className="mt-6 text-cream/50 font-sans text-sm max-w-sm leading-relaxed">
-            Your events should be generating pipeline. We make sure they do.
-          </p>
+          <div className="mt-6 border-t border-white/30 pt-6" style={{ maxWidth: '600px' }}>
+            <p className="font-sans font-light" style={{ fontSize: '18px', color: '#F9FAF6' }}>
+              Your events should be generating pipeline. We make sure they do.
+            </p>
+          </div>
         </div>
       </section>
 
