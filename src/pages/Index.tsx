@@ -265,7 +265,7 @@ const Index = () => {
             Your next pipeline quarter starts with the right room.
           </h2>
           <Button variant="editorial" size="lg" className="px-10 py-6">
-            Start a Conversation
+            Let's Talk
           </Button>
         </div>
       </section>
