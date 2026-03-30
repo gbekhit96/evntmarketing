@@ -35,8 +35,8 @@ const CaseStudies = () => (
             className="flex flex-col justify-between"
             style={{
               height: "280px",
-              backgroundColor: "#141414",
-              border: "1px solid #2a2a2a",
+              backgroundColor: "#120D0D",
+              border: "1px solid #2a2020",
               padding: "32px",
             }}
           >

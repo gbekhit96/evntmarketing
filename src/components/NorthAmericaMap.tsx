@@ -55,7 +55,7 @@ const NorthAmericaMap = () => (
       </Geographies>
       {cities.map((city) => (
         <Marker key={city.name} coordinates={city.coordinates}>
-          <circle r={6} fill="#4ecdc4" />
+          <circle r={6} fill="#61C3A7" />
           <text
             x={10}
             y={4}
