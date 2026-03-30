@@ -32,10 +32,12 @@ const Index = () => {
         <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
         <div className="absolute inset-0 bg-black/[0.6]" aria-hidden="true" />
         <div className={`${W} relative z-10`}>
-          <h1 className="font-semibold leading-[1.05] tracking-tighter max-w-5xl" style={{ fontSize: 'clamp(48px, 6vw, 80px)', color: '#F9FAF6' }}>
+          <h1 className="font-semibold leading-[1.05] tracking-tighter max-w-5xl" style={{ fontSize: 'clamp(40px, 5vw, 68px)', color: '#F9FAF6' }}>
             We don't plan events; <span className="italic font-normal" style={{ color: '#F9FAF6' }}>we build experiences that drive pipeline.</span>
           </h1>
-          <div className="mt-6 border-t border-white/30" style={{ maxWidth: '600px', paddingTop: '8px' }}>
+          <div className="mt-6" style={{ maxWidth: '600px' }}>
+            <div style={{ width: '60px', height: '1px', backgroundColor: 'rgba(255,255,255,0.3)' }} />
+            <div style={{ paddingTop: '8px' }}>
             <p className="font-sans font-normal" style={{ fontSize: '16px', color: '#F9FAF6', letterSpacing: '0' }}>
               Your events should be generating pipeline. We make sure they do.
             </p>
