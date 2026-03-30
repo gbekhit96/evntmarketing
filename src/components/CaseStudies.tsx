@@ -20,7 +20,7 @@ const caseStudies = [
 ];
 
 const CaseStudies = () => (
-  <section style={{ backgroundColor: "#0a0a0a", paddingTop: "100px", paddingBottom: "80px" }}>
+  <section style={{ backgroundColor: "#0A0707", paddingTop: "100px", paddingBottom: "80px" }}>
     <div className="max-w-[1200px] mx-auto px-6 md:px-12">
       <p className="text-[11px] font-sans uppercase mb-3" style={{ color: "#9a9a9a", letterSpacing: "0.1em" }}>
         Our Work
