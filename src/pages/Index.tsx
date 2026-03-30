@@ -123,7 +123,7 @@ const Index = () => {
       </section>
 
       {/* WHAT WE BUILD */}
-      <section className="py-20" style={{ backgroundColor: '#F5F0E8' }}>
+      <section className="py-20" style={{ backgroundColor: '#F9FAF6' }}>
         <div className={W}>
           <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] mb-3" style={{ color: 'rgba(13,13,13,0.35)' }}>What We Build</h2>
           <p className="text-3xl sm:text-4xl md:text-[3rem] font-serif font-semibold leading-[1.08] tracking-tight mb-10" style={{ color: '#0D0D0D' }}>
