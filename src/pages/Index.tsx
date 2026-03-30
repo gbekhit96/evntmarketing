@@ -70,7 +70,7 @@ const Index = () => {
               { src: "https://cdn.simpleicons.org/meta/ffffff", alt: "Meta" },
               { src: "https://cdn.simpleicons.org/snapchat/ffffff", alt: "Snapchat" },
               { src: "https://cdn.simpleicons.org/youtube/ffffff", alt: "YouTube" },
-              { src: "https://cdn.simpleicons.org/googlecloud/ffffff", alt: "Google Cloud" },
+              
               { src: "https://cdn.simpleicons.org/bmw/ffffff", alt: "BMW" },
               { src: "https://cdn.simpleicons.org/pinterest/ffffff", alt: "Pinterest" },
             ].map((logo) => (
