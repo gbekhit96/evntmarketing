@@ -232,7 +232,7 @@ const Index = () => {
               {
                 name: "Gabriel Bekhit",
                 title: "COO",
-                bio: "6+ years delivering experiential programs for global brands including Patrón, Diageo, BMW, and Publicis. From exclusive VIP environments at F1 Paddock Club to large-scale activations at Osheaga and Stampede.",
+                bio: "6+ years delivering experiential programs for global brands including Patrón, Diageo, BMW, and Publicis.",
                 photo: gabePhoto,
               },
             ].map((person) => (
