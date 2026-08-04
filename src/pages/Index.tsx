@@ -170,8 +170,8 @@ const Index = () => {
               <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">We don't mark up a single vendor invoice. Every dollar you spend with a venue, a chef, a production partner is the dollar they charged&nbsp; passed through transparently, in a budget you can see. We make our money on strategy and execution, not on inflating someone else's bill.</p>
             </div>
             <div>
-              <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream">Pipeline, not impressions.</p>
-              <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">Every event we run is tracked as a marketing channel attendee quality, pipeline influence, and deal velocity. In your CRM.</p>
+              <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream">Everything an in-house team does. Without the hire.</p>
+              <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">Strategy, production, creative, talent, guest management — a full events function on retainer. You get the capability of a senior events team from day one, without the salary, the ramp-up, or the single point of failure.</p>
             </div>
           </div>
         </div>
