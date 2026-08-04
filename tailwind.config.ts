@@ -13,7 +13,7 @@ export default {
       },
     },
     fontFamily: {
-      serif: ['"Cormorant"', 'Georgia', 'serif'],
+      serif: ['"DM Serif Display"', 'Georgia', 'serif'],
       sans: ['"Inter"', 'system-ui', 'sans-serif'],
     },
     extend: {
