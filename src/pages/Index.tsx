@@ -99,15 +99,15 @@ const Index = () => {
           <div className="md:col-span-7">
             <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-3">Why Now</h2>
             <p className="font-serif font-semibold leading-[1.08] tracking-tight text-cream max-w-xl mb-4" style={{ fontSize: 'clamp(32px, 4vw, 52px)' }}>
-              Access isn't the problem anymore. Meaningful connection is.
+              Your buyers stopped replying. They didn't stop showing up.
             </p>
             <p className="font-sans text-sm md:text-[15px] leading-relaxed text-cream/55 max-w-lg">
-              Events convert at 18–25%. Cold outreach converts at 2–3%.
+              40% of event-sourced leads convert to opportunity. Cold outreach converts at only 2–3%.
             </p>
           </div>
           <div className="md:col-span-4 md:col-start-9 flex flex-col justify-center items-start md:items-end text-left md:text-right">
             <p className="text-7xl sm:text-8xl md:text-[8rem] lg:text-[10rem] font-serif font-bold tracking-tighter leading-none text-cream">
-              21%
+              40%
             </p>
             <p className="font-sans text-[11px] md:text-xs tracking-[0.12em] uppercase text-cream/35 mt-4 max-w-[220px]">
               average event conversion rate vs. 2–3% for cold outreach
@@ -166,12 +166,12 @@ const Index = () => {
           <h2 className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/30 mb-3">Why EVNT</h2>
           <div className="space-y-12 max-w-4xl">
             <div>
-              <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream">Curated rooms, not crowded ones.</p>
-              <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">We don't measure success by attendance. We measure it by who's in the room and what happens after.</p>
+              <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream">Your money goes into the room. Not our margin.</p>
+              <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">We don't mark up a single vendor invoice. Every dollar you spend with a venue, a chef, a production partner is the dollar they charged&nbsp; passed through transparently, in a budget you can see. We make our money on strategy and execution, not on inflating someone else's bill.</p>
             </div>
             <div>
               <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream">Pipeline, not impressions.</p>
-              <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">Every event we run is tracked as a marketing channel — attendee quality, pipeline influence, and deal velocity. In your CRM.</p>
+              <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">Every event we run is tracked as a marketing channel attendee quality, pipeline influence, and deal velocity. In your CRM.</p>
             </div>
           </div>
         </div>
@@ -186,7 +186,7 @@ const Index = () => {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 md:gap-16">
             {[
-              { title: "Retainer", desc: "We embed as your Fractional Chief Events Officer — owning strategy, program development, and ongoing management." },
+              { title: "Retainer", desc: "We embed as your Fractional Chief Events Officer: owning strategy, program development, and ongoing management." },
               { title: "Project", desc: "Individual events executed on a project basis. Full production, on-the-ground delivery, and post-event reporting." },
               { title: "Creator", desc: "Integrate creator talent directly into your events. We handle sourcing, contracts, and activation." },
             ].map((col) => (
@@ -232,7 +232,7 @@ const Index = () => {
               {
                 name: "Gabriel Bekhit",
                 title: "COO",
-                bio: "6+ years delivering experiential programs for global brands including Patrón, Diageo, BMW, and Publicis.",
+                bio: "8+ years delivering experiential programs for global brands including Patrón, Diageo, BMW, and Publicis.",
                 photo: gabePhoto,
               },
             ].map((person) => (
