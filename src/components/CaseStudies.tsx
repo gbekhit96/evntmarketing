@@ -1,7 +1,7 @@
 const caseStudies = [
   {
     headline: "350 people. One room. It converted.",
-    body: "We ideated, built, and ran the Creator Marketing Summit from scratch — and rebooked it. Now title-sponsored by YouTube.",
+    body: "We ideated, built, and ran the Creator Marketing Summit from scratch and rebooked it. Now title-sponsored by YouTube.",
     logo: null,
     logoText: "#paid",
   },
