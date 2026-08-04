@@ -39,7 +39,7 @@ const Index = () => {
             <div style={{ width: '60px', height: '1px', backgroundColor: 'rgba(255,255,255,0.3)' }} />
             <div style={{ paddingTop: '8px' }}>
             <p className="font-sans font-normal" style={{ fontSize: '16px', color: '#F9FAF6', letterSpacing: '0' }}>
-              Built for companies where relationships drive revenue — and intentional experiences turn into measurable outcomes.
+              Built for companies where client relationships drive revenue.
             </p>
             </div>
           </div>
