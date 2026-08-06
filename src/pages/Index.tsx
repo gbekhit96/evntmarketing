@@ -285,7 +285,7 @@ const Index = () => {
             <div className="mb-6">
               <span className="font-serif text-lg font-semibold tracking-tight text-cream">EVNT</span>
               <p className="font-sans text-[11px] md:text-xs text-cream/30 mt-2 tracking-[0.02em] font-normal max-w-md">
-                Converting your enterprise pipeline through unforgettable events.
+                Events that Drive Pipeline
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-5 mb-6">
