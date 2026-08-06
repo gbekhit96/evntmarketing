@@ -283,13 +283,6 @@ const Index = () => {
         <div className={`${W} py-14 md:py-16`}>
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <span className="font-serif text-lg font-semibold tracking-tight text-cream">EVNT</span>
-            <nav className="flex items-center gap-8">
-              {["Work", "Services", "Team", "Contact"].map((link) => (
-                <a key={link} href={`#${link.toLowerCase()}`} className="font-sans text-[11px] tracking-[0.15em] uppercase text-cream/40 hover:text-cream transition-colors">
-                  {link}
-                </a>
-              ))}
-            </nav>
               <div className="flex items-center gap-5">
                 <div className="flex flex-col items-end gap-2">
                   <a href="mailto:khamilton@evntmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.1em]">
