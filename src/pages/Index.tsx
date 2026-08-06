@@ -285,7 +285,7 @@ const Index = () => {
             <div>
               <span className="font-serif text-lg font-semibold tracking-tight text-cream">EVNT</span>
               <p className="font-sans text-[11px] md:text-xs text-cream/30 mt-2 tracking-[0.02em] font-normal max-w-md">
-                Events that Drive Pipeline
+                Events that Drive Pipeline.
               </p>
             </div>
             <div className="flex flex-col items-center md:items-end gap-2">
