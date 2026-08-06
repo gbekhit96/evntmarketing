@@ -301,7 +301,7 @@ const Index = () => {
               </a>
             </div>
           </div>
-          <div className="w-full border-t border-cream/10 mt-8 pt-4">
+          <div className="w-full max-w-4xl mx-auto border-t border-cream/10 mt-8 pt-4">
             <p className="font-sans text-[10px] tracking-[0.12em] text-cream/25 text-center">© EVNT Marketing Inc. North America.</p>
           </div>
         </div>
