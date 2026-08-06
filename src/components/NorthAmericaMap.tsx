@@ -25,13 +25,13 @@ const cities: { name: string; coordinates: [number, number] }[] = [
 ];
 
 const NorthAmericaMap = () => (
-  <div style={{ width: "100%", height: "500px", backgroundColor: "#0A0707" }}>
+  <div className="w-full h-[340px] sm:h-[400px] md:h-[500px] bg-[#0A0707]">
     <ComposableMap
       projection="geoAlbersUsa"
       projectionConfig={{ scale: 1050 }}
       width={1200}
       height={500}
-      style={{ width: "100%", height: "500px" }}
+      style={{ width: "100%", height: "100%" }}
     >
       <Geographies geography={geoUrl}>
         {({ geographies }: { geographies: any[] }) =>
