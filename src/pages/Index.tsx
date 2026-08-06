@@ -11,6 +11,7 @@ import kerryAnnePhoto from "@/assets/kerry-anne.jpg";
 import gabePhoto from "@/assets/gabe.jpg";
 import NorthAmericaMap from "@/components/NorthAmericaMap";
 import CaseStudies from "@/components/CaseStudies";
+import ContactFormDialog from "@/components/ContactFormDialog";
 
 const W = "max-w-[1200px] mx-auto px-6 md:px-12";
 
@@ -273,9 +274,7 @@ const Index = () => {
           <h2 className="font-semibold leading-[0.98] tracking-tighter max-w-4xl mx-auto mb-10 text-cream" style={{ fontSize: 'clamp(40px, 5vw, 72px)' }}>
             Your next pipeline quarter starts with the right room.
           </h2>
-          <Button variant="editorial" size="lg" className="px-10 py-6">
-            Let's Talk
-          </Button>
+          <ContactFormDialog />
         </div>
       </section>
 
