@@ -280,23 +280,30 @@ const Index = () => {
 
       {/* FOOTER */}
       <footer style={{ backgroundColor: '#0A0707' }} className="border-t border-wine">
-        <div className={`${W} py-10 md:py-12`}>
-          <div className="flex flex-col items-center gap-5">
-            <span className="font-serif text-lg font-semibold tracking-tight text-cream">EVNT</span>
-            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
-              <a href="mailto:khamilton@evntmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.1em]">
+        <div className={`${W} py-16 md:py-20`}>
+          <div className="flex flex-col items-center text-center">
+            <div className="mb-6">
+              <span className="font-serif text-lg font-semibold tracking-tight text-cream">EVNT</span>
+              <p className="font-sans text-[11px] md:text-xs text-cream/30 mt-2 tracking-[0.02em] font-normal max-w-md">
+                Converting your enterprise pipeline through unforgettable events.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-5 mb-6">
+              <a href="mailto:khamilton@evntmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.05em]">
                 khamilton@evntmarketing.co
               </a>
               <span className="hidden sm:inline text-cream/20">|</span>
-              <a href="mailto:gbekhit@evntmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.1em]">
+              <a href="mailto:gbekhit@evntmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.05em]">
                 gbekhit@evntmarketing.co
               </a>
             </div>
-            <a href="https://www.instagram.com/evntmarketing/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-cream/40 hover:text-cream transition-colors" aria-label="Instagram">
+            <a href="https://www.instagram.com/evntmarketing/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-cream/40 hover:text-cream transition-colors mb-10" aria-label="Instagram">
               <Instagram size={16} />
-              <span className="font-sans text-[11px] tracking-[0.1em]">@evntmarketing</span>
+              <span className="font-sans text-[11px] tracking-[0.05em]">@evntmarketing</span>
             </a>
-            <p className="font-sans text-[10px] tracking-[0.15em] text-cream/25 text-center mt-4">© EVNT Marketing Inc. North America.</p>
+            <div className="w-full max-w-xs border-t border-cream/10 pt-6">
+              <p className="font-sans text-[10px] tracking-[0.12em] text-cream/25 text-center">© EVNT Marketing Inc. — Serving clients across North America.</p>
+            </div>
           </div>
         </div>
       </footer>
