@@ -299,7 +299,7 @@ const Index = () => {
                   gbekhit@eventmarketing.co
                 </a>
               </div>
-              <a href="#" className="text-cream/40 hover:text-cream transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/evntmarketing/" target="_blank" rel="noopener noreferrer" className="text-cream/40 hover:text-cream transition-colors" aria-label="Instagram">
                 <Instagram size={16} />
               </a>
               <a href="#" className="text-cream/40 hover:text-cream transition-colors" aria-label="LinkedIn">
