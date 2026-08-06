@@ -288,8 +288,8 @@ const Index = () => {
                 khamilton@evntmarketing.co
               </a>
               <span className="hidden sm:inline text-cream/20">|</span>
-              <a href="mailto:gbekhit@eventmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.1em]">
-                gbekhit@eventmarketing.co
+              <a href="mailto:gbekhit@evntmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.1em]">
+                gbekhit@evntmarketing.co
               </a>
             </div>
             <a href="https://www.instagram.com/evntmarketing/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-cream/40 hover:text-cream transition-colors" aria-label="Instagram">
