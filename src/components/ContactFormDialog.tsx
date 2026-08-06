@@ -39,9 +39,17 @@ const TIMELINES = [
 
 interface ContactFormDialogProps {
   triggerLabel?: string;
+  triggerVariant?: "default" | "editorial" | "editorialOutline" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+  triggerSize?: "default" | "sm" | "lg" | "icon";
+  triggerClassName?: string;
 }
 
-const ContactFormDialog = ({ triggerLabel = "Let's Talk" }: ContactFormDialogProps) => {
+const ContactFormDialog = ({
+  triggerLabel = "Let's Talk",
+  triggerVariant = "editorial",
+  triggerSize = "lg",
+  triggerClassName = "px-10 py-6",
+}: ContactFormDialogProps) => {
   const [open, setOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -94,7 +102,7 @@ const ContactFormDialog = ({ triggerLabel = "Let's Talk" }: ContactFormDialogPro
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
-        <Button variant="editorial" size="lg" className="px-10 py-6">
+        <Button variant={triggerVariant} size={triggerSize} className={triggerClassName}>
           {triggerLabel}
         </Button>
       </DialogTrigger>
