@@ -1,10 +1,10 @@
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 import { createClient } from 'npm:@supabase/supabase-js@2';
 
-// TODO: replace these placeholders with your real inbox addresses
+// Inboxes notified when a new inquiry is submitted
 const NOTIFY_EMAILS = [
-  'YOUR_EMAIL@example.com',
-  'PARTNER_EMAIL@example.com',
+  'gbekhit@evntmarketing.co',
+  'khamilton@evntmarketing.co',
 ];
 
 interface LeadBody {
