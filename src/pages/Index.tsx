@@ -280,28 +280,27 @@ const Index = () => {
 
       {/* FOOTER */}
       <footer style={{ backgroundColor: '#0A0707' }} className="border-t border-wine">
-        <div className={`${W} py-16 md:py-20`}>
+        <div className={`${W} py-10 md:py-12`}>
           <div className="flex flex-col items-center text-center">
-            <div className="mb-6">
+            <div className="mb-3">
               <span className="font-serif text-lg font-semibold tracking-tight text-cream">EVNT</span>
               <p className="font-sans text-[11px] md:text-xs text-cream/30 mt-2 tracking-[0.02em] font-normal max-w-md">
                 Events that Drive Pipeline
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-5 mb-6">
+            <div className="flex flex-col items-center gap-2 mb-3">
               <a href="mailto:khamilton@evntmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.05em]">
                 khamilton@evntmarketing.co
               </a>
-              <span className="hidden sm:inline text-cream/20">|</span>
               <a href="mailto:gbekhit@evntmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.05em]">
                 gbekhit@evntmarketing.co
               </a>
             </div>
-            <a href="https://www.instagram.com/evntmarketing/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-cream/40 hover:text-cream transition-colors mb-10" aria-label="Instagram">
+            <a href="https://www.instagram.com/evntmarketing/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-cream/40 hover:text-cream transition-colors mb-5" aria-label="Instagram">
               <Instagram size={16} />
               <span className="font-sans text-[11px] tracking-[0.05em]">@evntmarketing</span>
             </a>
-            <div className="w-full max-w-xs border-t border-cream/10 pt-6">
+            <div className="w-full max-w-xs border-t border-cream/10 pt-4">
               <p className="font-sans text-[10px] tracking-[0.12em] text-cream/25 text-center">© EVNT Marketing Inc. North America.</p>
             </div>
           </div>
