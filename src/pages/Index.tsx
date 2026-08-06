@@ -302,7 +302,7 @@ const Index = () => {
               <span className="font-sans text-[11px] tracking-[0.05em]">@evntmarketing</span>
             </a>
             <div className="w-full max-w-xs border-t border-cream/10 pt-6">
-              <p className="font-sans text-[10px] tracking-[0.12em] text-cream/25 text-center">© EVNT Marketing Inc. — Serving clients across North America.</p>
+              <p className="font-sans text-[10px] tracking-[0.12em] text-cream/25 text-center">© EVNT Marketing Inc. North America.</p>
             </div>
           </div>
         </div>
