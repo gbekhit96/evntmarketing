@@ -22,9 +22,7 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-wine-deep/95 backdrop-blur-sm border-b border-cream/5">
         <div className={`${W} flex items-center justify-between py-5`}>
           <span className="font-serif text-lg font-semibold tracking-tight text-cream">EVNT</span>
-          <Button variant="editorialOutline" size="sm" asChild>
-            <a href="#contact">Get in Touch</a>
-          </Button>
+          <ContactFormDialog triggerLabel="Get in Touch" triggerVariant="editorialOutline" triggerSize="sm" triggerClassName="" />
         </div>
       </nav>
 
