@@ -290,22 +290,14 @@ const Index = () => {
                 </a>
               ))}
             </nav>
-            <div className="flex items-center gap-5">
-              <div className="flex flex-col items-end gap-2">
-                <a href="mailto:khamilton@evntmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.1em]">
-                  khamilton@evntmarketing.co
+              <div className="flex items-center gap-3">
+                <a href="https://www.instagram.com/evntmarketing/" target="_blank" rel="noopener noreferrer" className="text-cream/40 hover:text-cream transition-colors" aria-label="Instagram">
+                  <Instagram size={16} />
                 </a>
-                <a href="mailto:gbekhit@eventmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.1em]">
-                  gbekhit@eventmarketing.co
+                <a href="https://www.instagram.com/evntmarketing/" target="_blank" rel="noopener noreferrer" className="font-sans text-[11px] tracking-[0.1em] text-cream/40 hover:text-cream transition-colors">
+                  @evntmarketing
                 </a>
               </div>
-              <a href="https://www.instagram.com/evntmarketing/" target="_blank" rel="noopener noreferrer" className="text-cream/40 hover:text-cream transition-colors" aria-label="Instagram">
-                <Instagram size={16} />
-              </a>
-              <a href="#" className="text-cream/40 hover:text-cream transition-colors" aria-label="LinkedIn">
-                <Linkedin size={16} />
-              </a>
-            </div>
           </div>
           <p className="font-sans text-[10px] tracking-[0.15em] text-cream/25 text-center mt-12">© EVNT. North America.</p>
         </div>
