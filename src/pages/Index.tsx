@@ -280,18 +280,19 @@ const Index = () => {
 
       {/* FOOTER */}
       <footer style={{ backgroundColor: '#0A0707' }} className="border-t border-wine">
-        <div className={`${W} py-14 md:py-16`}>
+        <div className={`${W} py-12 md:py-14`}>
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <span className="font-serif text-lg font-semibold tracking-tight text-cream">EVNT</span>
-              <div className="flex items-center gap-5">
-                <div className="flex flex-col items-end gap-2">
-                  <a href="mailto:khamilton@evntmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.1em]">
-                    khamilton@evntmarketing.co
-                  </a>
-                  <a href="mailto:gbekhit@eventmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.1em]">
-                    gbekhit@eventmarketing.co
-                  </a>
-                </div>
+            <div className="flex items-center gap-5">
+              <div className="flex flex-col items-end gap-2">
+                <a href="mailto:khamilton@evntmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.1em]">
+                  khamilton@evntmarketing.co
+                </a>
+                <a href="mailto:gbekhit@eventmarketing.co" className="font-sans text-[11px] text-cream/40 hover:text-cream transition-colors tracking-[0.1em]">
+                  gbekhit@eventmarketing.co
+                </a>
+              </div>
+              <div className="flex items-center gap-3 pl-5 border-l border-cream/10">
                 <a href="https://www.instagram.com/evntmarketing/" target="_blank" rel="noopener noreferrer" className="text-cream/40 hover:text-cream transition-colors" aria-label="Instagram">
                   <Instagram size={16} />
                 </a>
@@ -299,8 +300,9 @@ const Index = () => {
                   @evntmarketing
                 </a>
               </div>
+            </div>
           </div>
-          <p className="font-sans text-[10px] tracking-[0.15em] text-cream/25 text-center mt-12">© EVNT Marketing Inc. North America.</p>
+          <p className="font-sans text-[10px] tracking-[0.15em] text-cream/25 text-center mt-10">© EVNT Marketing Inc. North America.</p>
         </div>
       </footer>
     </main>
