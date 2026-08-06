@@ -251,10 +251,10 @@ const Index = () => {
       </section>
 
       {/* WHERE WE WORK */}
-      <section style={{ backgroundColor: '#0A0707', paddingTop: '100px', paddingBottom: '80px' }}>
+      <section className="py-12 sm:py-16 md:py-20" style={{ backgroundColor: '#0A0707' }}>
         <div className={W}>
           <p className="text-[11px] font-sans uppercase tracking-[0.1em] mb-3" style={{ color: '#9a9a9a' }}>Where We Work</p>
-          <h2 className="text-3xl sm:text-4xl md:text-[48px] font-serif leading-[1.1] tracking-tight text-white mb-10" style={{ fontWeight: 900 }}>
+          <h2 className="text-3xl sm:text-4xl md:text-[48px] font-serif leading-[1.1] tracking-tight text-white mb-6 md:mb-8" style={{ fontWeight: 900 }}>
             We've executed across North America.
           </h2>
         </div>
