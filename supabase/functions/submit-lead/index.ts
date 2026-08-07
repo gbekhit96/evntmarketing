@@ -72,33 +72,25 @@ Deno.serve(async (req) => {
       });
     }
 
-    // Email notification to both inboxes. Requires the project email domain to be
-    // set up; failures here must not lose the stored inquiry.
+    // Email notification to both inboxes. Failures here must not lose the stored inquiry.
     for (const recipient of NOTIFY_EMAILS) {
       try {
-        const { error: emailError } = await supabase.functions.invoke(
-          'send-transactional-email',
-          {
-            body: {
-              templateName: 'new-lead-notification',
-              recipientEmail: recipient,
-              idempotencyKey: `new-lead-${lead.id}-${recipient}`,
-              templateData: {
-                name,
-                email,
-                company,
-                budget,
-                timeline,
-                projectDetails,
-              },
-            },
+        await sendTemplateEmail('new-lead-notification', recipient, {
+          idempotencyKey: `new-lead-${lead.id}-${recipient}`,
+          templateData: {
+            name,
+            email,
+            company,
+            budget,
+            timeline,
+            projectDetails,
           },
-        );
-        if (emailError) console.error('Email notification failed:', emailError.message);
+        });
       } catch (e) {
-        console.error('Email notification threw:', e instanceof Error ? e.message : e);
+        console.error('Email notification failed:', e instanceof Error ? e.message : e);
       }
     }
+
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
