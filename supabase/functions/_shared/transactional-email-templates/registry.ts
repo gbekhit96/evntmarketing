@@ -21,6 +21,7 @@ export interface TemplateEntry {
  *   // then add to TEMPLATES: 'welcome': welcomeTemplate
  */
 export const TEMPLATES: Record<string, TemplateEntry> = {
+  'lead-confirmation': leadConfirmation,
   'new-lead-notification': newLeadNotification,
 }
 
