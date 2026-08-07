@@ -27,6 +27,7 @@ export const RecoveryEmail = ({
     <Preview>Reset your password for {siteName}</Preview>
     <Body style={main}>
       <Container style={container}>
+        <Text style={wordmark}>EVNT</Text>
         <Heading style={h1}>Reset your password</Heading>
         <Text style={text}>
           We received a request to reset your password for {siteName}. Click
@@ -46,26 +47,55 @@ export const RecoveryEmail = ({
 
 export default RecoveryEmail
 
-const main = { backgroundColor: '#ffffff', fontFamily: 'Arial, sans-serif' }
-const container = { padding: '20px 25px' }
+const main = {
+  backgroundColor: '#ffffff',
+  fontFamily: 'Georgia, "Times New Roman", serif',
+}
+const container = { padding: '32px 28px', maxWidth: '560px' }
+const wordmark = {
+  fontFamily: 'Georgia, serif',
+  fontSize: '14px',
+  letterSpacing: '0.3em',
+  color: '#5B1220',
+  margin: '0 0 24px',
+}
 const h1 = {
-  fontSize: '22px',
-  fontWeight: 'bold' as const,
-  color: '#000000',
-  margin: '0 0 20px',
+  fontSize: '26px',
+  fontWeight: 'normal' as const,
+  lineHeight: '1.2',
+  color: '#1a1a1a',
+  margin: '0 0 16px',
 }
 const text = {
+  fontFamily: 'Arial, sans-serif',
   fontSize: '14px',
-  color: '#55575d',
-  lineHeight: '1.5',
-  margin: '0 0 25px',
+  color: '#555555',
+  lineHeight: '1.6',
+  margin: '0 0 24px',
 }
+const link = { color: '#5B1220', textDecoration: 'underline' }
 const button = {
-  backgroundColor: '#000000',
+  backgroundColor: '#5B1220',
   color: '#ffffff',
+  fontFamily: 'Arial, sans-serif',
   fontSize: '14px',
-  borderRadius: '8px',
-  padding: '12px 20px',
+  letterSpacing: '0.05em',
+  borderRadius: '2px',
+  padding: '14px 26px',
   textDecoration: 'none',
+  display: 'inline-block',
 }
-const footer = { fontSize: '12px', color: '#999999', margin: '30px 0 0' }
+const codeStyle = {
+  fontFamily: 'Courier, monospace',
+  fontSize: '24px',
+  letterSpacing: '0.2em',
+  fontWeight: 'bold' as const,
+  color: '#5B1220',
+  margin: '0 0 30px',
+}
+const footer = {
+  fontFamily: 'Arial, sans-serif',
+  fontSize: '12px',
+  color: '#9a9a9a',
+  margin: '32px 0 0',
+}
