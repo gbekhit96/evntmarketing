@@ -170,7 +170,7 @@ const Index = () => {
             </div>
             <div>
               <p className="text-xl sm:text-3xl md:text-[2.75rem] lg:text-5xl font-serif leading-[1.1] tracking-tighter text-cream">Everything an in-house team does. Without the hire.</p>
-              <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">Strategy, production, creative, talent, guest management — a full events function on retainer. You get the capability of a senior events team from day one, without the salary, the ramp-up, or the single point of failure.</p>
+              <p className="font-sans text-sm leading-relaxed text-cream/45 mt-5 max-w-xl">Strategy, production, creative, talent, and guest management. A full events function on retainer. You get the capability of a senior events team from day one, without the salary, the ramp-up, or the single point of failure.</p>
             </div>
           </div>
         </div>
