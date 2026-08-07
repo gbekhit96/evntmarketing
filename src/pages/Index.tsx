@@ -218,7 +218,7 @@ const Index = () => {
             Senior operators. Not account managers.
           </p>
           <p className="font-sans text-sm leading-relaxed mb-10" style={{ color: 'rgba(13,13,13,0.55)' }}>
-            Every engagement is led by Kerry-Anne and Gabriel — not handed to a junior team.
+            Every engagement is led by Kerry-Anne and Gabriel, not handed to a junior team.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-14 md:gap-20 max-w-3xl">
             {[
