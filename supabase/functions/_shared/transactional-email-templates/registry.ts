@@ -1,4 +1,6 @@
 import type { ComponentType } from 'npm:react@18.3.1'
+import { template as newLeadNotification } from './new-lead-notification.tsx'
+
 
 export interface TemplateEntry {
   component: ComponentType<any>
