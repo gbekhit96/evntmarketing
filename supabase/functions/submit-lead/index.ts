@@ -74,6 +74,16 @@ Deno.serve(async (req) => {
       });
     }
 
+    // Confirmation email to the submitter.
+    try {
+      await sendTemplateEmail('lead-confirmation', email, {
+        idempotencyKey: `lead-confirm-${lead.id}-${email}`,
+        templateData: { name },
+      });
+    } catch (e) {
+      console.error('Confirmation email failed:', e instanceof Error ? e.message : e);
+    }
+
     // Email notification to both inboxes. Failures here must not lose the stored inquiry.
     for (const recipient of NOTIFY_EMAILS) {
       try {

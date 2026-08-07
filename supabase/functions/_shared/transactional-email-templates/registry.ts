@@ -1,4 +1,5 @@
 import type { ComponentType } from 'npm:react@18.3.1'
+import { template as leadConfirmation } from './lead-confirmation.tsx'
 import { template as newLeadNotification } from './new-lead-notification.tsx'
 
 
@@ -20,6 +21,7 @@ export interface TemplateEntry {
  *   // then add to TEMPLATES: 'welcome': welcomeTemplate
  */
 export const TEMPLATES: Record<string, TemplateEntry> = {
+  'lead-confirmation': leadConfirmation,
   'new-lead-notification': newLeadNotification,
 }
 
