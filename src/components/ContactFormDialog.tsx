@@ -111,10 +111,10 @@ const ContactFormDialog = ({
           <div className="py-8 text-center">
             <DialogHeader>
               <DialogTitle className="font-serif text-3xl leading-tight text-cream">
-                Thank you — your inquiry is in.
+                Thanks for reaching out.
               </DialogTitle>
               <DialogDescription className="font-sans text-sm text-cream/60 pt-3">
-                We've received your details and will be in touch within one business day.
+                We've received your details and someone from our team will be in touch within one business day.
               </DialogDescription>
             </DialogHeader>
             <Button
