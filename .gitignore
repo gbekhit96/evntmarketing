@@ -12,6 +12,17 @@ dist
 dist-ssr
 *.local
 
+# Environment / secrets — .env.example stays tracked as the template
+.env
+.env.*
+!.env.example
+
+# Cloudflare Workers (wrangler) local state
+.wrangler/
+
+# Local MCP server config (may contain access tokens)
+.mcp.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

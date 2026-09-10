@@ -1,296 +1,185 @@
-# EVNT Website Launch
+# EVNT — evntmarketing.co
 
-Build a high-end, minimal, editorial-style one-page website for a company called EVNT.
+Marketing site for EVNT, a fractional B2B events partner. One page, typography-led, built
+with React + Vite + Tailwind and shadcn/ui.
 
-The company is a strategic B2B event partner. It is NOT an event planning company. It operates as a growth-focused partner helping brands use events to drive pipeline, relationships, and revenue.
-
-The design direction should be inspired by laugon.com:
-
-- Typography-led
-
-- Minimal
-
-- Editorial
-
-- Confident
-
-- Clean layouts
-
-- Lots of white space
-
-- Large, bold headlines
-
-- Very little clutter
-
-- Premium, restrained aesthetic
-
-Do NOT make this look like a traditional event company.
-
-No stock event imagery, no crowds, no balloons, no conference visuals.
-
-It should feel like a modern strategy firm or creative consultancy.
-
-Color palette:
-
-- Black
-
-- White
-
-- Soft warm neutrals
-
-- High contrast
-
-No bright colors.
-
-Typography:
-
-- Strong serif for headlines
-
-- Clean sans-serif for body
-
-- Large scale type
+Originally generated with Lovable; now self-hosted on free infrastructure.
 
 ---
 
-STRUCTURE THE PAGE AS FOLLOWS:
+## Local development
 
----
-
-1. HERO SECTION
-
-Large headline:
-
-We don’t plan events.  
-
-We build experiences that drive revenue.
-
-Subtext (small):
-
-EVNT partners with modern brands to turn events into a measurable growth channel.
-
-CTA button:
-
-Get in Touch
-
-Layout:
-
-Centered or slightly offset with strong whitespace.
-
----
-
-2. STATEMENT SECTION (FULL WIDTH, LARGE TYPE)
-
-Events are no longer a brand play.  
-
-They’re a growth channel.
-
-No additional text. Let this breathe.
-
----
-
-3. CONTEXT SECTION (SHORT EXPLANATION)
-
-Left aligned paragraph, small:
-
-Digital marketing is oversaturated.  
-
-AI has made content and outreach easier — and trust harder to earn.
-
-As a result, real-world interaction has become one of the most valuable and scarce assets in modern marketing.
-
-Events are no longer optional.  
-
-They’re where relationships actually form.
-
----
-
-4. FRAMEWORK SECTION
-
-Headline:
-
-Engineering rooms where the right people meet under the right conditions.
-
-Supporting lines (stacked, minimal):
-
-Audience-first, always  
-
-Designed for real attendance — not obligation  
-
-Built to create meaningful interaction  
-
-Structured to accelerate relationships  
-
-Aligned to pipeline, not impressions
-
----
-
-5. SERVICES SECTION (GRID - 4 ITEMS)
-
-Event Strategy  
-
-Defining the right audience, format, and purpose
-
-Creative Direction  
-
-Designing experiences people actually want to attend
-
-Production & Execution  
-
-End-to-end delivery with a focus on quality and detail
-
-Programming & Content  
-
-Building moments that drive engagement and conversation
-
----
-
-6. HOW WE WORK SECTION
-
-Headline:
-
-Built as a strategic partner, not a vendor.
-
-Text (short paragraph):
-
-EVNT operates as a fractional Chief Events Officer, embedding with marketing and sales teams to build events as a repeatable growth channel.
-
-We focus on long-term programs, not one-off moments — combining strategy, execution, and measurement into a single system.
-
-Event strategy is managed on retainer.  
-
-Execution is handled per event.
-
----
-
-7. EVENT TYPES (CLEAN LIST OR GRID)
-
-Executive dinners  
-
-Workshops & experiences  
-
-Industry events & summits  
-
-Retreats & offsites  
-
-Field marketing & roadshows  
-
-Developer & community events
-
----
-
-8. CREDIBILITY SECTION
-
-Headline:
-
-Built on experience.
-
-Text:
-
-750+ events executed  
-
-$100M+ in pipeline influenced  
-
-10+ years in experiential and growth marketing  
-
-Experience across global brands and platforms including TikTok, Meta, Snapchat, and YouTube.
-
----
-
-9. DIFFERENTIATION SECTION (BOLD, STATEMENT STYLE)
-
-Curated rooms over large audiences  
-
-Relationships over impressions  
-
-Pipeline over vanity metrics  
-
-Experience design over event planning  
-
-Programs over one-off events
-
----
-
-10. MEASUREMENT SECTION
-
-Headline:
-
-Measured like a growth channel.
-
-Text:
-
-Events are integrated directly into CRM systems and tracked alongside sales and marketing activity.
-
-We measure attendee quality, relationship development, pipeline influence, and deal acceleration — not just attendance.
-
----
-
-11. FINAL CTA SECTION
-
-Headline:
-
-If events are part of your growth strategy, they should be built that way.
-
-Button:
-
-Start a Conversation
-
-Optional subtext:
-
-Let’s build something worth showing up for.
-
----
-
-FOOTER:
-
-EVNT  
-
-Simple contact email placeholder  
-
-Minimal layout
-
----
-
-DESIGN RULES:
-
-- Prioritize typography over imagery
-
-- Use spacing to create hierarchy
-
-- Keep text minimal and intentional
-
-- Avoid long paragraphs
-
-- No unnecessary animations
-
-- Subtle transitions only if elegant
-
-- Mobile responsive
-
-- Make it feel like a premium, early-stage but highly credible company
-
-The final result should feel:
-
-confident, modern, strategic, and elevated — not corporate and not overly designed.
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://evntmarketing.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/9bc1cb9a-136b-496e-8fb8-e13458ab4aa3).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requires Node.js 20+ and npm.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+npm install
+npm run dev          # http://localhost:8080
 ```
+
+Other scripts:
+
+```sh
+npm run build        # production build to ./dist
+npm run preview      # serve the built output locally
+npm run lint
+npm run test
+```
+
+Copy `.env.example` to `.env` and fill it in for local dev. `.env` is gitignored —
+never commit it.
+
+---
+
+## Architecture
+
+```
+Browser
+  │
+  ├── static site ......... GitHub Pages (built from ./dist by GitHub Actions)
+  │
+  └── contact form POST ... Cloudflare Worker (evnt-contact-form)
+                                  │
+                                  └── Resend API ──> email to the EVNT inbox
+```
+
+- **No database.** Inquiries are not stored anywhere — they arrive by email only.
+  If nobody reads the email, the lead is gone.
+- The form posts to the Worker URL baked in at build time via `VITE_FORM_ENDPOINT`.
+- The Worker sends two emails through Resend: a confirmation to the person who
+  submitted, and a notification to the EVNT team. It also enforces a CORS allowlist
+  (`ALLOWED_ORIGIN` in `wrangler.toml`).
+- Worker source: `worker/src/`. Worker config: `wrangler.toml`.
+
+---
+
+## Deployment
+
+**The site deploys automatically.** Every push to `main` runs
+`.github/workflows/deploy.yml`, which builds the Vite app and publishes `./dist` to
+GitHub Pages. You can also trigger it manually from the Actions tab
+("Deploy to GitHub Pages" → Run workflow).
+
+The Worker does **not** deploy automatically — deploy it by hand with
+`npx wrangler deploy` whenever `worker/src/` changes.
+
+SPA routing note: the workflow copies the built `index.html` to `404.html` so that
+deep links and refreshes on a sub-path are handled by react-router instead of
+GitHub's 404 page.
+
+---
+
+## Setup checklist — manual steps
+
+These are one-time steps only you can do. Do them in order.
+
+### 1. Set up Resend
+
+1. Create an account at [resend.com](https://resend.com).
+2. Add and verify the sending domain **`evntmarketing.co`** (the Worker sends from
+   `noreply@evntmarketing.co`). Resend will give you DKIM/SPF DNS records to add.
+3. ⚠️ **`mail.evntmarketing.co` is currently delegated to Lovable's nameservers.**
+   Resend's records will not resolve until that delegation is removed and the
+   subdomain is served by your own DNS provider. Delete the Lovable NS delegation
+   for `mail.evntmarketing.co` first, then add Resend's records.
+4. Create an API key in Resend and copy it.
+
+### 2. Give the Worker the Resend key
+
+```sh
+npx wrangler login
+npx wrangler secret put RESEND_API_KEY
+# paste the Resend API key when prompted
+```
+
+The key is stored by Cloudflare. It is never written to `wrangler.toml` or the repo.
+
+### 3. Deploy the Worker
+
+```sh
+npx wrangler deploy
+```
+
+Copy the URL it prints, e.g. `https://evnt-contact-form.<your-subdomain>.workers.dev`.
+
+### 4. Tell the site where the Worker is
+
+In GitHub: **Settings → Secrets and variables → Actions → Variables → New repository
+variable**
+
+| Name | Value |
+| --- | --- |
+| `VITE_FORM_ENDPOINT` | the Worker URL from step 3 |
+
+This is a **variable**, not a secret — it is a public endpoint URL, and Vite inlines
+it into the JavaScript bundle where anyone can read it. Storing it as a secret would
+be pointless and would make it harder to see what is deployed.
+
+Push to `main` (or re-run the workflow manually) after setting it — the value is read
+at build time, so the site must be rebuilt for a change to take effect.
+
+### 5. Enable GitHub Pages
+
+In GitHub: **Settings → Pages → Build and deployment → Source → GitHub Actions.**
+
+Do this before (or right after) the first workflow run; without it the deploy job fails.
+
+### 6. Hosting URL — already configured
+
+The site is served from **`https://gbekhit96.github.io/evntmarketing/`**. Three
+settings depend on that sub-path and are already in place:
+
+- `vite.config.ts` sets `base: '/evntmarketing/'` — without it every CSS/JS/image
+  URL 404s and the page renders blank.
+- `src/App.tsx` passes `basename={import.meta.env.BASE_URL}` to `BrowserRouter` —
+  without it `location.pathname` is `/evntmarketing/`, which never matches the `/`
+  route, and the homepage renders the NotFound page.
+- `wrangler.toml` sets `ALLOWED_ORIGIN = "https://gbekhit96.github.io"` — without
+  it the contact form is blocked by CORS.
+
+There is deliberately no `public/CNAME` file.
+
+**To move to `evntmarketing.co` later:** add `public/CNAME` containing that domain,
+set it under Settings → Pages → Custom domain, repoint apex DNS off Lovable to
+GitHub's servers (`185.199.108–111.153`) plus `CNAME www → gbekhit96.github.io`,
+change `base` to `'/'`, change `ALLOWED_ORIGIN` to `https://evntmarketing.co` and
+redeploy the Worker, then enable Enforce HTTPS. The `basename` line needs no change —
+it follows `base` automatically.
+
+---
+
+## Dependency note
+
+`.npmrc` sets `legacy-peer-deps=true`. This is required: `react-simple-maps@2.3.0`
+declares a peer range of React `16.8 || 17`, but the project runs React 18, and npm
+refuses to resolve that tree without the flag. The library works correctly on React 18
+— the peer metadata is simply out of date. This project was originally built with bun,
+which ignores peer conflicts by default, which is why the mismatch went unnoticed and
+why `react-simple-maps` was missing from `package-lock.json` entirely.
+
+The map it powers renders on the homepage (`src/components/NorthAmericaMap.tsx`), so
+the dependency is real and cannot just be dropped. Upgrading to `react-simple-maps@3`
+would remove the need for the flag, but changes how the map renders and should be
+treated as its own task.
+
+`package-lock.json` has been regenerated and is in sync; `npm ci` works. The repo also
+still carries `bun.lock` and `bun.lockb` — pick one package manager and delete the
+other's lockfiles.
+
+---
+
+## Security note
+
+`.env` was committed to this repository before it was made public, and is no longer
+tracked (it stays on disk locally). Adding it to `.gitignore` stops future commits but
+**does not remove it from git history**.
+
+The only value ever exposed was the Supabase *publishable* key — the key a browser
+downloads on every page load by design, equivalent to a public API endpoint. It was
+verified to permit no anonymous reads and no anonymous writes to the `leads` table,
+and the Supabase project is being decommissioned regardless, so **no rotation is
+needed**. The service-role key was never committed; a scan of all 334 commits found no
+real secret values.
+
+The general rule still stands: anything pushed to a public repo should be treated as
+public. Real secrets in this stack (`RESEND_API_KEY`) live only as Worker secrets set
+via `wrangler secret put`, never in the repo.

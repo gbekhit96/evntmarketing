@@ -18,7 +18,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { supabase } from "@/integrations/supabase/client";
+const FORM_ENDPOINT = import.meta.env.VITE_FORM_ENDPOINT;
 
 const BUDGETS = [
   "Under $25k",
@@ -61,6 +61,7 @@ const ContactFormDialog = ({
     budget: "",
     timeline: "",
     projectDetails: "",
+    website: "",
   });
 
   const set = (key: keyof typeof form, value: string) =>
@@ -71,10 +72,13 @@ const ContactFormDialog = ({
     setError(null);
     setSubmitting(true);
     try {
-      const { data, error: fnError } = await supabase.functions.invoke("submit-lead", {
-        body: form,
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
       });
-      if (fnError || (data && (data as { error?: string }).error)) {
+      const data = (await response.json().catch(() => null)) as { error?: string } | null;
+      if (!response.ok || data?.error) {
         setError("Something went wrong. Please email us directly and we'll follow up.");
       } else {
         setSubmitted(true);
@@ -91,7 +95,7 @@ const ContactFormDialog = ({
     if (!next) {
       setSubmitted(false);
       setError(null);
-      setForm({ name: "", email: "", company: "", budget: "", timeline: "", projectDetails: "" });
+      setForm({ name: "", email: "", company: "", budget: "", timeline: "", projectDetails: "", website: "" });
     }
   };
 
@@ -137,6 +141,22 @@ const ContactFormDialog = ({
             </DialogHeader>
 
             <form onSubmit={handleSubmit} className="mt-4 space-y-5">
+              <div
+                aria-hidden="true"
+                className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden"
+              >
+                <label htmlFor="website">Website</label>
+                <input
+                  id="website"
+                  name="website"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={form.website}
+                  onChange={(e) => set("website", e.target.value)}
+                />
+              </div>
+
               <div className="grid gap-5 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="name" className={labelClass}>Name *</Label>

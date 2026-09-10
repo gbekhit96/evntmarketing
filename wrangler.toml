@@ -1,0 +1,9 @@
+name = "evnt-contact-form"
+main = "worker/src/index.ts"
+compatibility_date = "2025-09-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://gbekhit96.github.io"
+
+# RESEND_API_KEY is a secret, not a var — set it with
+# `npx wrangler secret put RESEND_API_KEY`. It is never stored in this file.

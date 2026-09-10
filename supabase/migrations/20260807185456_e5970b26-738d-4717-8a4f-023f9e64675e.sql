@@ -1,1 +1,0 @@
-delete from public.leads where email = 'test@example.com';
