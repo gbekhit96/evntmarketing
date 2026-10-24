@@ -1,14 +1,17 @@
 import { Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import eventDinnerTable from "@/assets/event-dinner-table.jpg";
-import patron360 from "@/assets/patron-360.jpg";
-import spaceInterior from "@/assets/patron-360-divider.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
-import tableSetting from "@/assets/table-setting.jpg";
-import detailHands from "@/assets/detail-hands.jpg";
-import venueWide from "@/assets/venue-wide.jpg";
-import kerryAnnePhoto from "@/assets/kerry-anne.jpg";
-import gabePhoto from "@/assets/gabe.jpg";
+import patron360 from "@/assets/patron-360.webp";
+import spaceInterior from "@/assets/patron-360-divider.webp";
+import heroBg from "@/assets/hero-bg.webp";
+import tableSetting from "@/assets/table-setting.webp";
+import kerryAnnePhoto from "@/assets/kerry-anne.webp";
+import gabePhoto from "@/assets/gabe.webp";
+import tiktokLogo from "@/assets/logos/tiktok.svg";
+import metaLogo from "@/assets/logos/meta.svg";
+import snapchatLogo from "@/assets/logos/snapchat.svg";
+import youtubeLogo from "@/assets/logos/youtube.svg";
+import bmwLogo from "@/assets/logos/bmw.svg";
+import pinterestLogo from "@/assets/logos/pinterest.svg";
 import NorthAmericaMap from "@/components/NorthAmericaMap";
 import CaseStudies from "@/components/CaseStudies";
 import ContactDialog from "@/components/ContactDialog";
@@ -71,13 +74,12 @@ const Index = () => {
           <p className="text-[11px] font-sans uppercase tracking-[0.25em] text-cream/25 mb-12 text-center">Trusted by teams at</p>
           <div className="flex flex-wrap justify-center items-center gap-x-14 gap-y-10">
             {[
-              { src: "https://cdn.simpleicons.org/tiktok/ffffff", alt: "TikTok" },
-              { src: "https://cdn.simpleicons.org/meta/ffffff", alt: "Meta" },
-              { src: "https://cdn.simpleicons.org/snapchat/ffffff", alt: "Snapchat" },
-              { src: "https://cdn.simpleicons.org/youtube/ffffff", alt: "YouTube" },
-              
-              { src: "https://cdn.simpleicons.org/bmw/ffffff", alt: "BMW" },
-              { src: "https://cdn.simpleicons.org/pinterest/ffffff", alt: "Pinterest" },
+              { src: tiktokLogo, alt: "TikTok" },
+              { src: metaLogo, alt: "Meta" },
+              { src: snapchatLogo, alt: "Snapchat" },
+              { src: youtubeLogo, alt: "YouTube" },
+              { src: bmwLogo, alt: "BMW" },
+              { src: pinterestLogo, alt: "Pinterest" },
             ].map((logo) => (
               <img
                 key={logo.alt}

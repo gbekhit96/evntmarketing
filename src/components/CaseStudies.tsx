@@ -1,3 +1,6 @@
+import youtubeLogo from "@/assets/logos/youtube.svg";
+import tiktokLogo from "@/assets/logos/tiktok.svg";
+
 const caseStudies = [
   {
     headline: "350 people. One room. It converted.",
@@ -8,13 +11,13 @@ const caseStudies = [
   {
     headline: "The best sales meeting they never saw coming.",
     body: "50 internal reps. A custom sneaker. Thought leadership that stuck. Pipeline that followed.",
-    logo: "https://cdn.simpleicons.org/youtube/ffffff",
+    logo: youtubeLogo,
     logoText: null,
   },
   {
     headline: "The deal starts before the deck.",
     body: "We put TikTok's team and #paid creators in an Aesop store. Relationships built. Conversations started. Conversions followed.",
-    logo: "https://cdn.simpleicons.org/tiktok/ffffff",
+    logo: tiktokLogo,
     logoText: null,
   },
 ];
