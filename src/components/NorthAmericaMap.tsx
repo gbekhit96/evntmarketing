@@ -4,8 +4,9 @@ import {
   Geography,
   Marker,
 } from "react-simple-maps";
-
-const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+// Country outlines from world-atlas 2.0.2 (Natural Earth), bundled so the map has
+// no outside dependency. `?url` makes Vite emit the file and return its URL.
+import geoUrl from "@/assets/countries-110m.json?url";
 
 const northAmericaIds = ["840", "124", "484"];
 
