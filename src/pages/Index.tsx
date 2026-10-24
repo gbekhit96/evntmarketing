@@ -11,7 +11,7 @@ import kerryAnnePhoto from "@/assets/kerry-anne.jpg";
 import gabePhoto from "@/assets/gabe.jpg";
 import NorthAmericaMap from "@/components/NorthAmericaMap";
 import CaseStudies from "@/components/CaseStudies";
-const MAILTO = "mailto:gbekhit@evntmarketing.co,khamilton@evntmarketing.co?subject=Inquiry%20from%20evntmarketing.co";
+import ContactDialog from "@/components/ContactDialog";
 
 const W = "max-w-[1200px] mx-auto px-6 md:px-12";
 
@@ -22,7 +22,7 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-wine-deep/95 backdrop-blur-sm border-b border-cream/5">
         <div className={`${W} flex items-center justify-between py-5`}>
           <span className="font-serif text-lg font-semibold tracking-tight text-cream">EVNT</span>
-          <Button asChild variant="editorialOutline" size="sm"><a href={MAILTO}>Get in Touch</a></Button>
+          <ContactDialog><Button variant="editorialOutline" size="sm">Get in Touch</Button></ContactDialog>
         </div>
       </nav>
 
@@ -272,7 +272,7 @@ const Index = () => {
           <h2 className="font-semibold leading-[0.98] tracking-tighter max-w-4xl mx-auto mb-10 text-cream" style={{ fontSize: 'clamp(40px, 5vw, 72px)' }}>
             Your next pipeline quarter starts with the right room.
           </h2>
-          <Button asChild variant="editorial" size="lg" className="px-10 py-6"><a href={MAILTO}>Let's Talk</a></Button>
+          <ContactDialog><Button variant="editorial" size="lg" className="px-10 py-6">Let's Talk</Button></ContactDialog>
         </div>
       </section>
 
