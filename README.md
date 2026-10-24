@@ -25,8 +25,7 @@ npm run lint
 npm run test
 ```
 
-Copy `.env.example` to `.env` and fill it in for local dev. `.env` is gitignored —
-never commit it.
+No environment variables are required — the site is fully static.
 
 ---
 
@@ -35,20 +34,12 @@ never commit it.
 ```
 Browser
   │
-  ├── static site ......... GitHub Pages (built from ./dist by GitHub Actions)
-  │
-  └── contact form POST ... Cloudflare Worker (evnt-contact-form)
-                                  │
-                                  └── Resend API ──> email to the EVNT inbox
+  └── static site ......... GitHub Pages (built from ./dist by GitHub Actions)
 ```
 
-- **No database.** Inquiries are not stored anywhere — they arrive by email only.
-  If nobody reads the email, the lead is gone.
-- The form posts to the Worker URL baked in at build time via `VITE_FORM_ENDPOINT`.
-- The Worker sends two emails through Resend: a confirmation to the person who
-  submitted, and a notification to the EVNT team. It also enforces a CORS allowlist
-  (`ALLOWED_ORIGIN` in `wrangler.toml`).
-- Worker source: `worker/src/`. Worker config: `wrangler.toml`.
+There is no contact form and no backend. The "Get in Touch" and "Let's Talk"
+buttons are `mailto:` links that open a prefilled email to
+`khamilton@evntmarketing.co` and `gbekhit@evntmarketing.co`.
 
 ---
 
@@ -59,9 +50,6 @@ Browser
 GitHub Pages. You can also trigger it manually from the Actions tab
 ("Deploy to GitHub Pages" → Run workflow).
 
-The Worker does **not** deploy automatically — deploy it by hand with
-`npx wrangler deploy` whenever `worker/src/` changes.
-
 SPA routing note: the workflow copies the built `index.html` to `404.html` so that
 deep links and refreshes on a sub-path are handled by react-router instead of
 GitHub's 404 page.
@@ -70,62 +58,15 @@ GitHub's 404 page.
 
 ## Setup checklist — manual steps
 
-These are one-time steps only you can do. Do them in order.
-
-### 1. Set up Resend
-
-1. Create an account at [resend.com](https://resend.com).
-2. Add and verify the sending domain **`evntmarketing.co`** (the Worker sends from
-   `noreply@evntmarketing.co`). Resend will give you DKIM/SPF DNS records to add.
-3. ⚠️ **`mail.evntmarketing.co` is currently delegated to Lovable's nameservers.**
-   Resend's records will not resolve until that delegation is removed and the
-   subdomain is served by your own DNS provider. Delete the Lovable NS delegation
-   for `mail.evntmarketing.co` first, then add Resend's records.
-4. Create an API key in Resend and copy it.
-
-### 2. Give the Worker the Resend key
-
-```sh
-npx wrangler login
-npx wrangler secret put RESEND_API_KEY
-# paste the Resend API key when prompted
-```
-
-The key is stored by Cloudflare. It is never written to `wrangler.toml` or the repo.
-
-### 3. Deploy the Worker
-
-```sh
-npx wrangler deploy
-```
-
-Copy the URL it prints, e.g. `https://evnt-contact-form.<your-subdomain>.workers.dev`.
-
-### 4. Tell the site where the Worker is
-
-In GitHub: **Settings → Secrets and variables → Actions → Variables → New repository
-variable**
-
-| Name | Value |
-| --- | --- |
-| `VITE_FORM_ENDPOINT` | the Worker URL from step 3 |
-
-This is a **variable**, not a secret — it is a public endpoint URL, and Vite inlines
-it into the JavaScript bundle where anyone can read it. Storing it as a secret would
-be pointless and would make it harder to see what is deployed.
-
-Push to `main` (or re-run the workflow manually) after setting it — the value is read
-at build time, so the site must be rebuilt for a change to take effect.
-
-### 5. Enable GitHub Pages
+### 1. Enable GitHub Pages
 
 In GitHub: **Settings → Pages → Build and deployment → Source → GitHub Actions.**
 
 Do this before (or right after) the first workflow run; without it the deploy job fails.
 
-### 6. Hosting URL — already configured
+### 2. Hosting URL — already configured
 
-The site is served from **`https://gbekhit96.github.io/evntmarketing/`**. Three
+The site is served from **`https://gbekhit96.github.io/evntmarketing/`**. Two
 settings depend on that sub-path and are already in place:
 
 - `vite.config.ts` sets `base: '/evntmarketing/'` — without it every CSS/JS/image
@@ -133,16 +74,13 @@ settings depend on that sub-path and are already in place:
 - `src/App.tsx` passes `basename={import.meta.env.BASE_URL}` to `BrowserRouter` —
   without it `location.pathname` is `/evntmarketing/`, which never matches the `/`
   route, and the homepage renders the NotFound page.
-- `wrangler.toml` sets `ALLOWED_ORIGIN = "https://gbekhit96.github.io"` — without
-  it the contact form is blocked by CORS.
 
 There is deliberately no `public/CNAME` file.
 
 **To move to `evntmarketing.co` later:** add `public/CNAME` containing that domain,
 set it under Settings → Pages → Custom domain, repoint apex DNS off Lovable to
 GitHub's servers (`185.199.108–111.153`) plus `CNAME www → gbekhit96.github.io`,
-change `base` to `'/'`, change `ALLOWED_ORIGIN` to `https://evntmarketing.co` and
-redeploy the Worker, then enable Enforce HTTPS. The `basename` line needs no change —
+and change `base` to `'/'`. The `basename` line needs no change —
 it follows `base` automatically.
 
 ---
@@ -181,5 +119,4 @@ needed**. The service-role key was never committed; a scan of all 334 commits fo
 real secret values.
 
 The general rule still stands: anything pushed to a public repo should be treated as
-public. Real secrets in this stack (`RESEND_API_KEY`) live only as Worker secrets set
-via `wrangler secret put`, never in the repo.
+public.
