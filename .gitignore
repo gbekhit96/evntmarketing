@@ -12,13 +12,9 @@ dist
 dist-ssr
 *.local
 
-# Environment / secrets — .env.example stays tracked as the template
+# Environment / secrets
 .env
 .env.*
-!.env.example
-
-# Cloudflare Workers (wrangler) local state
-.wrangler/
 
 # Local MCP server config (may contain access tokens)
 .mcp.json

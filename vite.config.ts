@@ -4,7 +4,9 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(() => ({
-  // Lovable and custom domains serve at root; GitHub Pages opts into its subpath.
+  // Local dev and a custom domain serve from "/". The GitHub Pages project URL
+  // (gbekhit96.github.io/evntmarketing/) needs the subpath, which the deploy
+  // workflow passes in via VITE_DEPLOY_BASE.
   base: process.env.VITE_DEPLOY_BASE || "/",
   server: {
     host: "::",
