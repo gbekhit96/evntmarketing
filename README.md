@@ -3,7 +3,8 @@
 Marketing site for EVNT, a fractional B2B events partner. One page, typography-led, built
 with React + Vite + Tailwind and shadcn/ui.
 
-Originally generated with Lovable; now self-hosted on free infrastructure.
+Originally generated with Lovable; now a fully static site hosted only on GitHub Pages.
+There is no backend, database, form handler or third-party hosting.
 
 ---
 
@@ -25,7 +26,7 @@ npm run lint
 npm run test
 ```
 
-No environment variables are required — the site is fully static.
+No environment variables are required.
 
 ---
 
@@ -37,51 +38,65 @@ Browser
   └── static site ......... GitHub Pages (built from ./dist by GitHub Actions)
 ```
 
-There is no contact form and no backend. The "Get in Touch" and "Let's Talk"
-buttons are `mailto:` links that open a prefilled email to
-`khamilton@evntmarketing.co` and `gbekhit@evntmarketing.co`.
+There is no contact form. The "Get in Touch" (nav) and "Let's Talk" (closing section)
+buttons open a popup (`src/components/ContactDialog.tsx`) that shows
+`info@evntmarketing.co` with a "Copy Email" button and an "Open in email app"
+`mailto:` link. Change the address in that one file.
 
 ---
 
 ## Deployment
 
 **The site deploys automatically.** Every push to `main` runs
-`.github/workflows/deploy.yml`, which builds the Vite app and publishes `./dist` to
-GitHub Pages. You can also trigger it manually from the Actions tab
+`.github/workflows/deploy.yml`, which runs `npm ci`, builds the Vite app and publishes
+`./dist` to GitHub Pages. You can also trigger it manually from the Actions tab
 ("Deploy to GitHub Pages" → Run workflow).
 
+GitHub setting this depends on: **Settings → Pages → Build and deployment → Source →
+GitHub Actions.**
+
+`npm ci` fails if `package.json` and `package-lock.json` disagree. Always add or remove
+packages with `npm install <pkg>` / `npm uninstall <pkg>` so the lockfile updates with
+it, and commit both files together. npm is the only package manager — don't add bun,
+yarn or pnpm lockfiles.
+
 SPA routing note: the workflow copies the built `index.html` to `404.html` so that
-deep links and refreshes on a sub-path are handled by react-router instead of
-GitHub's 404 page.
+deep links and refreshes are handled by react-router instead of GitHub's 404 page.
 
 ---
 
-## Setup checklist — manual steps
+## Hosting URL
 
-### 1. Enable GitHub Pages
+The site is currently served from **`https://gbekhit96.github.io/evntmarketing/`**.
+That sub-path is supplied at build time: the workflow sets
+`VITE_DEPLOY_BASE: /evntmarketing/`, `vite.config.ts` uses it as `base`, and
+`src/App.tsx` passes `basename={import.meta.env.BASE_URL}` to `BrowserRouter` so routes
+follow it automatically. Locally, `base` is `/`.
 
-In GitHub: **Settings → Pages → Build and deployment → Source → GitHub Actions.**
+### Moving to evntmarketing.co
 
-Do this before (or right after) the first workflow run; without it the deploy job fails.
+Do these in one sitting:
 
-### 2. Hosting URL — already configured
+1. **Verify the domain** (one-time, recommended): GitHub profile → Settings → Pages →
+   Add a verified domain → add the TXT record it gives you. This stops anyone else
+   from claiming the domain on GitHub Pages.
+2. **DNS** (at the domain's DNS host — currently Google nameservers,
+   `ns-cloud-a*.googledomains.com`):
+   - Replace the apex `A` record (currently `185.158.133.1`, Lovable) with GitHub's
+     four: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
+   - Optional `AAAA` records: `2606:50c0:8000::153`, `2606:50c0:8001::153`,
+     `2606:50c0:8002::153`, `2606:50c0:8003::153`.
+   - Add `CNAME www → gbekhit96.github.io`.
+   - **Do not touch the `MX` records or Google Workspace `TXT` records** — they run
+     company email.
+3. **Repo:** Settings → Pages → Custom domain → `evntmarketing.co`.
+4. **Code:** delete the `env: VITE_DEPLOY_BASE: /evntmarketing/` lines from the Build
+   step in `.github/workflows/deploy.yml` and push. The site then builds for `/`.
+5. Once GitHub has issued the certificate, tick **Enforce HTTPS**.
 
-The site is served from **`https://gbekhit96.github.io/evntmarketing/`**. Two
-settings depend on that sub-path and are already in place:
-
-- `vite.config.ts` sets `base: '/evntmarketing/'` — without it every CSS/JS/image
-  URL 404s and the page renders blank.
-- `src/App.tsx` passes `basename={import.meta.env.BASE_URL}` to `BrowserRouter` —
-  without it `location.pathname` is `/evntmarketing/`, which never matches the `/`
-  route, and the homepage renders the NotFound page.
-
-There is deliberately no `public/CNAME` file.
-
-**To move to `evntmarketing.co` later:** add `public/CNAME` containing that domain,
-set it under Settings → Pages → Custom domain, repoint apex DNS off Lovable to
-GitHub's servers (`185.199.108–111.153`) plus `CNAME www → gbekhit96.github.io`,
-and change `base` to `'/'`. The `basename` line needs no change —
-it follows `base` automatically.
+No `public/CNAME` file is needed: with a GitHub Actions deploy, the custom domain lives
+in the Pages settings and a CNAME file is ignored. The github.io URL redirects to the
+custom domain once it is set.
 
 ---
 
@@ -90,33 +105,25 @@ it follows `base` automatically.
 `.npmrc` sets `legacy-peer-deps=true`. This is required: `react-simple-maps@2.3.0`
 declares a peer range of React `16.8 || 17`, but the project runs React 18, and npm
 refuses to resolve that tree without the flag. The library works correctly on React 18
-— the peer metadata is simply out of date. This project was originally built with bun,
-which ignores peer conflicts by default, which is why the mismatch went unnoticed and
-why `react-simple-maps` was missing from `package-lock.json` entirely.
+— the peer metadata is simply out of date.
 
 The map it powers renders on the homepage (`src/components/NorthAmericaMap.tsx`), so
 the dependency is real and cannot just be dropped. Upgrading to `react-simple-maps@3`
 would remove the need for the flag, but changes how the map renders and should be
 treated as its own task.
 
-`package-lock.json` has been regenerated and is in sync; `npm ci` works. The repo also
-still carries `bun.lock` and `bun.lockb` — pick one package manager and delete the
-other's lockfiles.
-
 ---
 
 ## Security note
 
 `.env` was committed to this repository before it was made public, and is no longer
-tracked (it stays on disk locally). Adding it to `.gitignore` stops future commits but
-**does not remove it from git history**.
+tracked. Adding it to `.gitignore` stops future commits but **does not remove it from
+git history**.
 
 The only value ever exposed was the Supabase *publishable* key — the key a browser
-downloads on every page load by design, equivalent to a public API endpoint. It was
-verified to permit no anonymous reads and no anonymous writes to the `leads` table,
-and the Supabase project is being decommissioned regardless, so **no rotation is
-needed**. The service-role key was never committed; a scan of all 334 commits found no
-real secret values.
+downloads on every page load by design. It was verified to permit no anonymous reads
+or writes, and the site no longer uses Supabase at all, so **no rotation is needed**.
+The service-role key was never committed.
 
-The general rule still stands: anything pushed to a public repo should be treated as
-public.
+The general rule still stands: this repo is public, so anything pushed to it should be
+treated as public.

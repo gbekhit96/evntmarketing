@@ -1,1 +1,0 @@
-COMMENT ON TABLE public.leads IS 'DEPRECATED: inquiry form and email functions removed; no longer used by the app';
