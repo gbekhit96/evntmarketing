@@ -4,8 +4,8 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(() => ({
-  // Served from https://gbekhit96.github.io/evntmarketing/ — assets 404 without this.
-  base: "/evntmarketing/",
+  // Lovable and custom domains serve at root; GitHub Pages opts into its subpath.
+  base: process.env.VITE_DEPLOY_BASE || "/",
   server: {
     host: "::",
     port: 8080,
