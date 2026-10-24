@@ -32,9 +32,8 @@ jobs:
         run: npm ci
 
       - name: Build
+        # Served at the root of evntmarketing.co, so no sub-path (base defaults to "/").
         run: npm run build
-        env:
-          VITE_DEPLOY_BASE: /evntmarketing/
 
       - name: Add SPA fallback for client-side routes
         # GitHub Pages serves 404.html for any path it can't find on disk.
