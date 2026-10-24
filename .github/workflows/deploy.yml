@@ -32,11 +32,6 @@ jobs:
         run: npm ci
 
       - name: Build
-        env:
-          # Public URL of the Cloudflare Worker that handles contact-form POSTs.
-          # Set in repo Settings -> Secrets and variables -> Actions -> Variables.
-          # Not a secret: it is a public endpoint and Vite inlines it into the bundle.
-          VITE_FORM_ENDPOINT: ${{ vars.VITE_FORM_ENDPOINT }}
         run: npm run build
 
       - name: Add SPA fallback for client-side routes
